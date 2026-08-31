@@ -23,8 +23,7 @@ export type CustomTokenPurpose = "email_verification" | "password_reset";
 export const normalizeEmail = (value: string) => value.trim().toLowerCase();
 
 export function validateCustomPassword(password: string) {
-  if (password.length < 12) return "Use at least 12 characters. A longer passphrase is safer.";
-  if (password.length > 128) return "Password must be 128 characters or fewer.";
+  if (password.length < 1) return "Password is required.";
   return null;
 }
 
