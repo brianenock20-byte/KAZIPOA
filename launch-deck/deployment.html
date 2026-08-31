@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Deployment strategy</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0}
+.slide-container{width:1280px;min-height:720px;background:#0d2538;color:#f5f0e6;position:relative;padding:54px 72px 0;font-family:Arial,sans-serif}
+.grid{position:absolute;inset:0;display:grid;grid-template-columns:repeat(12,1fr);pointer-events:none}
+.grid span{border-right:1px solid rgba(235,248,244,.1)}
+.eyebrow{font:600 13px/1.3 ui-monospace,monospace;letter-spacing:.14em;text-transform:uppercase;color:#7ee2a8}
+.title{margin-top:20px;font-size:57px;line-height:1;letter-spacing:-.055em;font-weight:800;max-width:760px}
+.dek{margin-top:17px;max-width:690px;color:#bdd8c8;font-size:19px;line-height:1.4}
+.flow{position:absolute;left:72px;right:72px;top:235px;display:grid;grid-template-columns:repeat(4,1fr);border-top:2px solid #23834c;border-bottom:1px solid rgba(235,248,244,.28)}
+.stage{min-height:235px;padding:22px 24px 18px 0;border-right:1px solid rgba(235,248,244,.2)}
+.stage:not(:first-child){padding-left:24px}
+.stage:last-child{border-right:0}
+.num{font:700 14px/1.2 ui-monospace,monospace;color:#f0a35c}
+.label{margin-top:18px;font-size:21px;line-height:1.05;font-weight:800}
+.copy{margin-top:15px;color:#b9d4c3;font-size:15px;line-height:1.45}
+.arrow{position:absolute;top:336px;color:#f0a35c;font-size:26px}
+.a1{left:350px}.a2{left:650px}.a3{left:950px}
+.gates{position:absolute;left:72px;right:72px;bottom:88px;border-top:3px solid #d56e29;padding-top:14px;display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:26px}
+.gate strong{display:block;font-size:18px;line-height:1.2;color:#f5f0e6}
+.gate span{display:block;margin-top:7px;color:#b9d4c3;font-size:14px;line-height:1.35}
+.footer{position:absolute;left:72px;right:72px;bottom:34px;display:flex;justify-content:space-between;border-top:1px solid rgba(235,248,244,.28);padding-top:10px;font:600 12px/1.3 ui-monospace,monospace;color:#a9c8b4;letter-spacing:.08em;text-transform:uppercase}
+</style>
+</head>
+<body>
+<div class="slide-container">
+<div class="grid"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+<div class="eyebrow">09 / deployment strategy</div>
+<div class="title">A controlled path from soft launch to public scale.</div>
+<div class="dek">The current stack is full-stack and managed: React, Express/tRPC, MySQL, authentication, storage, notifications, and automatic checkpoint publishing.</div>
+<div class="flow">
+<div class="stage"><div class="num">01 / PLATFORM</div><div class="label">Managed full stack</div><div class="copy">Manus hosting runs the application, server, database, auth, storage, and release checkpoints as one operational surface.</div></div>
+<div class="stage"><div class="num">02 / DOMAIN</div><div class="label">Bind the final origin</div><div class="copy">Connect `portol.kazipoa.co.tz`, verify DNS and HTTPS, and align APP_BASE_URL, canonical URLs, robots, and sitemap.</div></div>
+<div class="stage"><div class="num">03 / DISCOVER</div><div class="label">Open the SEO loop</div><div class="copy">Submit the final sitemap, inspect representative vacancy URLs, and validate JobPosting rich results in Search Console.</div></div>
+<div class="stage"><div class="num">04 / OPERATE</div><div class="label">Launch with evidence</div><div class="copy">Run controlled seeker, employer, and Admin tests, then monitor uptime, payments, alerts, indexing, and Core Web Vitals.</div></div>
+</div>
+<div class="arrow a1">→</div><div class="arrow a2">→</div><div class="arrow a3">→</div>
+<div class="gates"><div class="gate"><strong>Launch gate</strong><span>Resolve the custom-domain sitemap mismatch, public vacancy sitemap coverage, slow HTML responses, and hosting badge decision before broad promotion.</span></div><div class="gate"><strong>Rollback path</strong><span>Preserve checkpoints and revert the latest version if discovery, payments, notifications, or authentication regress.</span></div><div class="gate"><strong>Operating rhythm</strong><span>Daily checks in week one; weekly SEO, performance, payments, and notification review thereafter.</span></div></div>
+<div class="footer"><span>09 / 10</span><span>Kazipoa — Civic Signal</span><span>Deploy with evidence</span></div>
+</div>
+</body>
+</html>

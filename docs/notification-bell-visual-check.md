@@ -1,0 +1,3 @@
+# Notification bell visual check
+
+The `/dashboard` preview was captured at desktop width 1280×720 and mobile width 390×844. The available preview session is unauthenticated, so the route displayed the public/auth boundary rather than an interactive Seeker or Employer workspace. Source inspection confirms the Job Seeker bell is placed above the existing notification history panel, carries an unread count when persisted notifications are unread, and uses an accessible button label. The Employer response presentation uses the shared accepted, declined, and pending tone helpers. No claim of authenticated Employer interaction is made from this preview.

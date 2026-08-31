@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Tanzania-first marketplace</title>
+<style>
+*{box-sizing:border-box}
+body{margin:-1px} /* lift slide up by 1px so total <720 without changing min-height */
+.slide-container{width:1280px;min-height:720px;background:#ebf8f4;color:#17324d;position:relative;padding:54px 72px 0;font-family:Arial,sans-serif}
+.grid{position:absolute;inset:0;display:grid;grid-template-columns:repeat(12,1fr);pointer-events:none}
+.grid span{border-right:1px solid rgba(23,50,77,.10)}
+.eyebrow{font:600 13px/1.3 ui-monospace,monospace;letter-spacing:.14em;text-transform:uppercase;color:#23834c}
+.layout{display:grid;grid-template-columns:510px 1fr;gap:70px;margin-top:34px;align-items:start}
+.hero-img{width:510px;height:280px;object-fit:contain;background:#d9ebe3;display:block} /* slightly reduced image height */
+.caption{margin-top:8px;font:600 11px/1.4 ui-monospace,monospace;letter-spacing:.08em;text-transform:uppercase;color:#648273} /* tighten caption spacing */
+.title{font-size:58px;line-height:.98;letter-spacing:-.055em;font-weight:800;max-width:520px}
+.copy{margin-top:12px;max-width:470px;font-size:20px;line-height:1.35;color:#276749} /* small reduction of top gap */
+.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:26px;border-top:1px solid #9ebdaf;border-bottom:1px solid #9ebdaf;padding-top:16px;padding-bottom:16px} /* moved up 8px */
+.metric strong{display:block;font-size:38px;line-height:1;color:#1f9d55}.metric span{display:block;margin-top:8px;font:600 11px/1.4 ui-monospace,monospace;letter-spacing:.07em;text-transform:uppercase;color:#648273}
+.info{margin-top:20px;display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid #9ebdaf;border-bottom:1px solid #9ebdaf} /* moved up 8px */
+.info div{padding:12px 12px 12px 0;border-right:1px solid #9ebdaf}.info div:not(:first-child){padding-left:12px}.info div:last-child{border-right:0}.info b{display:block;font:600 11px ui-monospace,monospace;letter-spacing:.08em;text-transform:uppercase;color:#d56e29}.info span{display:block;margin-top:7px;font-size:15px;line-height:1.2;color:#315d4b}
+.footer{position:absolute;left:72px;right:72px;bottom:34px;display:flex;justify-content:space-between;border-top:1px solid #9ebdaf;padding-top:11px;font:600 12px/1.3 ui-monospace,monospace;color:#5b7b6b;letter-spacing:.08em;text-transform:uppercase}
+</style>
+</head>
+<body>
+<div class="slide-container">
+<div class="grid"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+<div class="eyebrow">04 / Tanzania-first marketplace</div>
+<div class="layout">
+<div><img class="hero-img" src="/home/ubuntu/upload/search_images/X8VULqVNeUfD.jpg" alt="Dar es Salaam skyline" /><div class="caption">Dar es Salaam / Tanzania · visual reference</div></div>
+<div><div class="title">Built for the way Tanzania searches.</div><div class="copy">Support for all 31 regions, salary context in TZS, and vacancy details that make the next step easier to understand.</div><div class="metrics"><div class="metric"><strong>5</strong><span>open opportunities</span></div><div class="metric"><strong>4</strong><span>verified companies</span></div><div class="metric"><strong>0</strong><span>applications started</span></div></div><div class="info"><div><b>Location</b><span>Region + locality</span></div><div><b>Salary</b><span>TZS context</span></div><div><b>Deadline</b><span>Visible date</span></div><div><b>Employer</b><span>Verified identity</span></div></div></div>
+</div>
+<div class="footer"><span>Kazipoa — Civic Signal</span><span>Observed production baseline · 04 / 10</span></div>
+</div>
+</body>
+</html>

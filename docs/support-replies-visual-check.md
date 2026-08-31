@@ -1,0 +1,3 @@
+# Support replies visual check
+
+Desktop and mobile full-page captures show the authenticated account layout remains readable with the Support History section below the workspace content. The panel is private to the signed-in account, displays a green New reply badge when persisted Admin-reply timing indicates an unread response, and provides a reply textarea with a disabled send action until text is entered. Mobile CSS stacks the history header, ticket metadata, and reply controls without horizontal overflow. The capture session had no existing support tickets, so the empty history state was visible; no production ticket was created or modified during visual verification.

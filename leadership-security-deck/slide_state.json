@@ -1,0 +1,78 @@
+{
+  "project_info": {
+    "title": "From feature requests to controlled releases",
+    "created": 1787696547.874,
+    "last_updated": 1787696828.411,
+    "total_slides": 6
+  },
+  "slides": [
+    {
+      "id": "problem",
+      "state": "edited",
+      "pageNum": 1
+    },
+    {
+      "id": "protection",
+      "state": "edited",
+      "pageNum": 2
+    },
+    {
+      "id": "rbac",
+      "state": "edited",
+      "pageNum": 3
+    },
+    {
+      "id": "threats",
+      "state": "edited",
+      "pageNum": 4
+    },
+    {
+      "id": "staging",
+      "state": "edited",
+      "pageNum": 5
+    },
+    {
+      "id": "decision",
+      "state": "edited",
+      "pageNum": 6
+    }
+  ],
+  "outline": [
+    {
+      "id": "problem",
+      "title": "From feature requests to controlled releases",
+      "summary": "Introduce the reusable Admin Dashboard Hardening skill as a repeatable workflow for incremental, production-safe changes.",
+      "image_plan": "Use a suitable image if needed"
+    },
+    {
+      "id": "protection",
+      "title": "What the skill protects",
+      "summary": "Show the assets and trust boundaries covered by the skill, emphasizing that the browser is untrusted and API/database enforce policy.",
+      "image_plan": "Use a suitable image if needed"
+    },
+    {
+      "id": "rbac",
+      "title": "RBAC baseline",
+      "summary": "Explain explicit permissions, deny-by-default authorization, scope checks, blocked-account handling, and privilege-escalation safeguards.",
+      "image_plan": "Use a suitable image if needed"
+    },
+    {
+      "id": "threats",
+      "title": "Threat model priorities",
+      "summary": "Summarize the highest-impact threats and the controls required before release.",
+      "image_plan": "Use a suitable image if needed"
+    },
+    {
+      "id": "staging",
+      "title": "Staging proof before production",
+      "summary": "Show the staging isolation rules and the evidence matrix required for each protected procedure.",
+      "image_plan": "Use a suitable image if needed"
+    },
+    {
+      "id": "decision",
+      "title": "Evidence and leadership decision",
+      "summary": "Present validation results, limitations, and the decision framework for adopting the skill in staging and production.",
+      "image_plan": "Use a suitable image if needed"
+    }
+  ]
+}

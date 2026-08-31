@@ -1,0 +1,3 @@
+Browser evidence — 23 August 2026
+
+The authorized browser navigation to the Cloudflare zone URL redirected to `https://dash.cloudflare.com/login?redirect_uri=.../kazipoa.co.tz`. The takeover browser session is not authenticated to Cloudflare, so no DNS records were changed and no Cloudflare mutation was attempted. The earlier user screenshot showed the zone status “Waiting for your registrar to propagate your new nameservers”; therefore the next required owner action is Cloudflare/registrar authentication and nameserver setup. Do not claim DKIM or Return-Path verification until the records are visible through authoritative DNS and Postmark’s Verify controls succeed.

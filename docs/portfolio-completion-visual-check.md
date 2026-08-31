@@ -1,0 +1,3 @@
+# Portfolio completion visual check
+
+The dashboard was captured at 1280×720 and 390×844. The available preview session rendered the Job Seeker workspace, so the notification history, CV/photo surfaces, interview calendar, and responsive spacing could be inspected directly. The mobile capture stacks the workspace sections without horizontal overflow. Employer and Admin direct interaction could not be claimed because no authenticated sessions for those roles were available; their form, applicant, badge, analytics, user-management, and activity-log surfaces were reviewed in source and existing role-protected procedures remain unchanged. Provider-gated integrations were not exercised.

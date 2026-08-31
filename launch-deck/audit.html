@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Final audit findings</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0}
+.slide-container{width:1280px;min-height:720px;background:#0d2538;color:#f5f0e6;position:relative;padding:54px 72px 0;font-family:Arial,sans-serif}
+.grid{position:absolute;inset:0;display:grid;grid-template-columns:repeat(12,1fr);pointer-events:none}
+.grid span{border-right:1px solid rgba(235,248,244,.1)}
+.eyebrow{font:600 13px/1.3 ui-monospace,monospace;letter-spacing:.14em;text-transform:uppercase;color:#7ee2a8}
+.title{margin-top:20px;font-size:56px;line-height:1;letter-spacing:-.055em;font-weight:800;max-width:760px}
+.lead{margin-top:17px;color:#bfd8c9;font-size:18px;line-height:1.35;max-width:780px}
+.audit{position:absolute;left:72px;right:300px;top:224px;border-top:1px solid rgba(235,248,244,.36)}
+.row{display:grid;grid-template-columns:34px 190px 1fr 104px;gap:14px;align-items:start;padding:12px 0;border-bottom:1px solid rgba(235,248,244,.18)}
+.num{font:700 12px ui-monospace,monospace;color:#f0a35c}
+.check{font-size:16px;font-weight:800;color:#f5f0e6}
+.detail{font-size:14px;line-height:1.3;color:#b9d4c3}
+.status{font:700 11px ui-monospace,monospace;letter-spacing:.09em;text-transform:uppercase;text-align:right}
+.pass{color:#7ee2a8}.action{color:#f0a35c}.risk{color:#f09b70}
+.rail{position:absolute;right:72px;top:224px;width:180px;border-left:2px solid #d56e29;padding-left:18px}
+.rail-label{font:600 11px ui-monospace,monospace;letter-spacing:.12em;text-transform:uppercase;color:#f0a35c}
+.count{margin-top:18px;font-size:42px;line-height:1;color:#7ee2a8;font-weight:800}
+.count small{display:block;margin-top:5px;color:#bfd8c9;font:600 12px ui-monospace,monospace;letter-spacing:.08em;text-transform:uppercase}
+.rail p{margin-top:28px;font-size:14px;line-height:1.45;color:#bfd8c9}
+.footer{position:absolute;left:72px;right:72px;bottom:34px;display:flex;justify-content:space-between;border-top:1px solid rgba(235,248,244,.28);padding-top:11px;font:600 12px/1.3 ui-monospace,monospace;color:#a9c8b4;letter-spacing:.08em;text-transform:uppercase}
+</style>
+</head>
+<body>
+<div class="slide-container">
+<div class="grid"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+<div class="eyebrow">08 / final launch audit</div>
+<div class="title">Ready for a soft launch.<br><span style="color:#f0a35c">Not yet ready for paid reach.</span></div>
+<div class="lead">Public routes and structured data are working. Domain alignment, vacancy sitemap coverage, latency, compression, and platform branding remain the visible launch actions.</div>
+<div class="audit">
+<div class="row"><div class="num">01</div><div class="check">Public routes</div><div class="detail">Homepage, vacancy, robots.txt, and sitemap.xml returned HTTP 200.</div><div class="status pass">Pass</div></div>
+<div class="row"><div class="num">02</div><div class="check">JobPosting JSON-LD</div><div class="detail">Present in served local vacancy HTML; tests parse required fields.</div><div class="status pass">Pass</div></div>
+<div class="row"><div class="num">03</div><div class="check">Domain consistency</div><div class="detail">robots and sitemap point to portol.kazipoa.co.tz; current live origin is Manus.</div><div class="status action">Resolve</div></div>
+<div class="row"><div class="num">04</div><div class="check">Vacancy sitemap</div><div class="detail">Current observed sitemap lists homepage, companies, and safety; no vacancy URLs.</div><div class="status action">Expand</div></div>
+<div class="row"><div class="num">05</div><div class="check">Response timing</div><div class="detail">Single run: homepage TTFB ~3.33s; vacancy TTFB ~4.49s; vacancy total ~11.68s.</div><div class="status risk">Priority</div></div>
+<div class="row"><div class="num">06</div><div class="check">Compression/cache</div><div class="detail">HTML ~371 KB; no content-encoding; HTML no-cache headers observed.</div><div class="status action">Review</div></div>
+<div class="row"><div class="num">07</div><div class="check">Branding overlay</div><div class="detail">“Made with Manus” visible bottom-right on live rendered pages.</div><div class="status action">Confirm</div></div>
+</div>
+<div class="rail"><div class="rail-label">Audit posture</div><div class="count">2<small>verified passes</small></div><p>Resolve the domain and sitemap before SEO submission. Optimize vacancy latency before broad traffic acquisition.</p></div>
+<div class="footer"><span>08 / 10</span><span>Kazipoa — Civic Signal</span><span>Audit run · 21 Aug 2026</span></div>
+</div>
+</body>
+</html>

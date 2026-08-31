@@ -1,0 +1,113 @@
+{
+  "project_info": {
+    "title": "Kazipoa",
+    "created": 1787293968.826,
+    "last_updated": 1787294259.601,
+    "total_slides": 10
+  },
+  "slides": [
+    {
+      "id": "kazipoa",
+      "state": "edited",
+      "pageNum": 1
+    },
+    {
+      "id": "promise",
+      "state": "edited",
+      "pageNum": 2
+    },
+    {
+      "id": "live",
+      "state": "edited",
+      "pageNum": 3
+    },
+    {
+      "id": "tanzania",
+      "state": "edited",
+      "pageNum": 4
+    },
+    {
+      "id": "trust",
+      "state": "edited",
+      "pageNum": 5
+    },
+    {
+      "id": "notifications",
+      "state": "edited",
+      "pageNum": 6
+    },
+    {
+      "id": "seo",
+      "state": "edited",
+      "pageNum": 7
+    },
+    {
+      "id": "audit",
+      "state": "edited",
+      "pageNum": 8
+    },
+    {
+      "id": "deployment",
+      "state": "edited",
+      "pageNum": 9
+    },
+    {
+      "id": "thirty_days",
+      "state": "edited",
+      "pageNum": 10
+    }
+  ],
+  "outline": [
+    {
+      "id": "kazipoa",
+      "title": "Kazipoa",
+      "summary": "Title slide: Find work. Find talent. Move forward. Introduce the Tanzania-focused marketplace and soft-launch status."
+    },
+    {
+      "id": "promise",
+      "title": "The launch promise",
+      "summary": "Explain the Civic Signal promise: clearer information, verified employers, and safer next steps for seekers and employers."
+    },
+    {
+      "id": "live",
+      "title": "What is live today",
+      "summary": "Summarize seeker, employer, and admin capabilities in a clear three-column product overview."
+    },
+    {
+      "id": "tanzania",
+      "title": "Tanzania-first marketplace",
+      "summary": "Show the Tanzania-first footprint, public metrics observed in production, and the information architecture of a vacancy.",
+      "image_plan": "/home/ubuntu/upload/search_images/X8VULqVNeUfD.jpg - Slide 4 discusses Tanzania-first marketplace; Image 3 shows Dar Es Salaam, Tanzania skyline fitting the context."
+    },
+    {
+      "id": "trust",
+      "title": "Trust and manual payment model",
+      "summary": "Explain the M-Pesa-first manual payment verification flow and the publication gate."
+    },
+    {
+      "id": "notifications",
+      "title": "Notification and seeker retention loop",
+      "summary": "Show the matching-alert, in-app/email delivery, notification center, and Saved jobs retention loop."
+    },
+    {
+      "id": "seo",
+      "title": "SEO and Google Jobs readiness",
+      "summary": "Summarize canonical metadata, Open Graph/Twitter tags, JobPosting JSON-LD, robots, and public vacancy pages."
+    },
+    {
+      "id": "audit",
+      "title": "Final audit findings",
+      "summary": "Present verified public-route, SEO consistency, sitemap, performance, compression, and branding findings before broad promotion."
+    },
+    {
+      "id": "deployment",
+      "title": "Deployment strategy",
+      "summary": "Describe Manus-managed full-stack deployment, custom-domain launch path, Search Console submission, and rollback strategy."
+    },
+    {
+      "id": "thirty_days",
+      "title": "First 30 days after launch",
+      "summary": "Give the day 0–1, week 1, and weeks 2–4 operating cadence and success signal."
+    }
+  ]
+}

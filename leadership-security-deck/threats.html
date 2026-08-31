@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Threat model priorities</title>
+<style>
+*{box-sizing:border-box} body{margin:0} .slide-container{width:1280px;min-height:720px;background:#f4f7f3;color:#10233f;padding:52px 70px 40px;font-family:Arial,Helvetica,sans-serif}.eyebrow{font-size:13px;letter-spacing:2.2px;color:#1c7152;font-weight:700;margin:0 0 18px}.heading{display:flex;justify-content:space-between;align-items:end;border-bottom:1px solid #cbd9d0;padding-bottom:23px}.heading h1{font-size:48px;letter-spacing:-1.8px;margin:0}.heading p{max-width:420px;font-size:17px;line-height:1.4;color:#607064;margin:0}.risk-table{width:100%;margin-top:20px;border-collapse:collapse;background:#fff;border:1px solid #b9cbbf}.risk-table th{background:#10233f;color:#9bd4a7;text-align:left;padding:12px 20px;font-size:14px;letter-spacing:1px;text-transform:uppercase}.risk-table td{padding:14px 20px;border-bottom:1px solid #edf1ef;font-size:16px;line-height:1.4}.risk-table tr:last-child td{border-bottom:0}.risk-table b{color:#1c7152}.impact-badge{display:inline-block;padding:4px 8px;background:#fde8e8;color:#c81e1e;font-size:12px;font-weight:700;border-radius:4px;margin-bottom:4px}.blocker-section{margin-top:10px;background:#10233f;color:#f4f7f2;padding:18px 20px;display:flex;align-items:center;gap:18px}.blocker-icon{width:42px;height:42px;background:#c81e1e;color:#fff;display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:700}.blocker-text h3{font-size:20px;margin:0 0 4px;color:#9bd4a7}.blocker-text p{font-size:15px;margin:0;color:#b9c9c0}
+</style>
+</head>
+<body>
+<div class="slide-container">
+  <p class="eyebrow">03 · RISK ASSESSMENT</p>
+  <div class="heading">
+    <h1>Threat model priorities</h1>
+    <p>Highest-impact attack paths identified during the design phase and the mandatory controls required for production release.</p>
+  </div>
+  <table class="risk-table">
+    <thead>
+      <tr>
+        <th style="width:30%">Attack Path</th>
+        <th style="width:15%">Impact</th>
+        <th style="width:55%">Required Control</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><b>Admin Procedure Abuse</b><br/>Non-admin calling privileged APIs</td>
+        <td><span class="impact-badge">CRITICAL</span></td>
+        <td>Server-side <code>adminProcedure</code> middleware; deny-by-default tests; generic 403 responses.</td>
+      </tr>
+      <tr>
+        <td><b>Privilege Escalation</b><br/>Changing roles via guessed IDs</td>
+        <td><span class="impact-badge">CRITICAL</span></td>
+        <td>Role checks + target ownership/org scope; transactional last-admin protection; audit logging.</td>
+      </tr>
+      <tr>
+        <td><b>Data Leakage in Exports</b><br/>Secrets or PII in CSV/XLSX</td>
+        <td><span class="impact-badge">HIGH</span></td>
+        <td>Explicit output allow-lists; cell escaping for formula injection; secret field exclusion.</td>
+      </tr>
+      <tr>
+        <td><b>Session/Auth Forgery</b><br/>Replaying or forging callbacks</td>
+        <td><span class="impact-badge">CRITICAL</span></td>
+        <td>Nonce/state binding; secure cookie flags; rate limits; session re-evaluation on block.</td>
+      </tr>
+    </tbody>
+  </table>
+  <section class="blocker-section">
+    <div class="blocker-icon">!</div>
+    <div class="blocker-text">
+      <h3>Release Blockers</h3>
+      <p>Any Admin procedure callable by non-admins, cross-tenant data access, or ability to remove the last active Admin will block production deployment.</p>
+    </div>
+  </section>
+</div>
+</body>
+</html>

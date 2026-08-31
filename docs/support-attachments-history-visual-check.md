@@ -1,0 +1,3 @@
+# Support attachments and history visual check
+
+Desktop and mobile full-page captures show the authenticated Support History section now includes search and status controls, while the empty state remains clear when there are no tickets. Ticket cards support attachment links and reply attachment selection without changing the account layout. The support modal includes an attachment picker limited to JPG, PNG, and PDF files up to 5MB, and the FAQ now covers response timing, rejected vacancies and payments, direct contact, attachments, ticket follow-up, and safety. Mobile layout stacks the filters and form controls without horizontal overflow. No production ticket or file was created during visual verification.

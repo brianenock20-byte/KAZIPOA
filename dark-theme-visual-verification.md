@@ -1,0 +1,5 @@
+# Portal-wide dark-theme verification
+
+The active dark theme now uses Deep Midnight Navy for the header, dark charcoal for the canvas, and Deep Forest Green for grouped content surfaces. The captured 1280×720 public/dashboard preview shows the active authenticated Job Seeker route with no white page canvas; the header, sidebar, hero, workspace canvas, and guide surface use the requested dark palette. The latest stylesheet override targets public search, live jobs, verified companies, categories, vacancy cards, company cards, application forms, settings fields, empty states, and payment rows under `html.dark`. Direct Admin/Employer visual evidence remains dependent on an authenticated role-specific session.
+
+The 390×844 mobile preview keeps the dark navy header, charcoal sidebar, green section strip, dark content canvas, and green workspace controls intact without horizontal overflow or white panel flashes. The same authenticated preview is rendered for both `/` and `/dashboard` in the current session, so public-home visual evidence and role-specific Employer evidence should be treated separately from this capture.

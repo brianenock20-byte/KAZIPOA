@@ -1,0 +1,3 @@
+# Job Seeker logout visual verification
+
+The authenticated Job Seeker dashboard now renders the profile trigger in the top header beside the language/theme/workspace controls. Desktop verification at 1280×720 showed the Brian Enock avatar, name, and Job Seeker label in the header without disturbing the existing dark navigation. Mobile verification at 390×844 showed the compact avatar trigger beside the menu and theme controls without overflow. The dropdown contains the existing ownership-safe Logout action and does not restore Edit Profile or Settings. The full dropdown click path is protected by the existing profile-menu handler and is covered by source regression assertions; direct click automation was not available in the screenshot capture.

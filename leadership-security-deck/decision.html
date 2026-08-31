@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Evidence and leadership decision</title>
+<style>
+*{box-sizing:border-box} body{margin:0} .slide-container{width:1280px;min-height:720px;background:#10233f;color:#f4f7f2;display:flex;flex-direction:column;padding:54px 70px 39px;font-family:Arial,Helvetica,sans-serif;position:relative} .eyebrow{font-size:14px;letter-spacing:2.4px;color:#9bd4a7;font-weight:700;margin:0 0 34px}.heading{display:flex;justify-content:space-between;align-items:end;border-bottom:1px solid #3a5960;padding-bottom:23px}.heading h1{font-size:48px;letter-spacing:-1.8px;margin:0}.heading p{max-width:420px;font-size:17px;line-height:1.4;color:#b9c9c0;margin:0}.grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:16px;flex:1}.panel{background:rgba(255,255,255,0.03);border:1px solid #3a5960;padding:16px}.panel h3{font-size:20px;color:#9bd4a7;margin:0 0 16px;text-transform:uppercase;letter-spacing:1px}.list{list-style:none;padding:0;margin:0}.list li{font-size:16px;line-height:1.5;color:#c8d4cc;margin-bottom:8px;padding-left:24px;position:relative}.list li::before{content:"\f00c";font-family:"Font Awesome 6 Free";font-weight:900;position:absolute;left:0;color:#39a96b}.list li.warning::before{content:"\f06a";color:#e09b32}.decision-box{margin-top:16px;background:#1c7152;padding:24px;border-left:8px solid #9bd4a7}.decision-box h2{font-size:28px;margin:0 0 10px;color:#fff}.decision-box p{font-size:18px;margin:0;color:#dff4e5;line-height:1.4}.footer{display:flex;justify-content:space-between;align-items:center;font-size:13px;color:#90a79a;border-top:1px solid #304b52;padding-top:17px;margin-top:8px}.tag{color:#9bd4a7;font-weight:700;letter-spacing:1.3px}
+</style>
+</head>
+<body>
+<div class="slide-container">
+  <p class="eyebrow">05 · RELEASE READINESS</p>
+  <div class="heading">
+    <h1>Evidence & decision</h1>
+    <p>The skill package is validated and ready for staging adoption. Production release remains gated by the threat-model exit criteria.</p>
+  </div>
+  <div class="grid">
+    <section class="panel">
+      <h3>Validation Evidence</h3>
+      <ul class="list">
+        <li>Skill package passed all automated validation checks.</li>
+        <li>Isolated browser fixture verified UI search, sort, and filters.</li>
+        <li>Kazipoa regression suite: 40 files and 124 tests passed.</li>
+        <li>TypeScript type-check and production build successful.</li>
+      </ul>
+    </section>
+    <section class="panel">
+      <h3>Release Constraints</h3>
+      <ul class="list">
+        <li class="warning">Interactive Admin verification remains owner-controlled.</li>
+        <li class="warning">Staging isolation is required before production promotion.</li>
+        <li class="warning">Unresolved high-severity findings are absolute blockers.</li>
+        <li class="warning">Production builds must be verified on the live URL.</li>
+      </ul>
+    </section>
+  </div>
+  <div class="decision-box">
+    <h2>Leadership Decision</h2>
+    <p>Approve the <b>Admin Dashboard Hardening</b> skill for staging use. Mandate the <b>Security Audit Plan</b> for all future Admin changes and treat unverified builds as release blockers.</p>
+  </div>
+  <div class="footer">
+    <span>Final briefing · security-first delivery</span>
+    <span class="tag">KAZIPOA / READY FOR STAGING</span>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,11 @@
+node_modules
+dist
+.git
+*.md
+.env
+.env.local
+launch-deck
+leadership-security-deck
+docs
+scripts/*.mjs
+.tmp-*.mjs
