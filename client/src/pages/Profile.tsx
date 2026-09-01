@@ -25,6 +25,8 @@ export default function Profile() {
 
   const role = user.role === "admin" ? "Admin" : user.accountType === "employer" ? "Employer" : "Job seeker";
   const accountLabel = user.role === "admin" ? "Admin workspace" : user.accountType === "employer" ? "Employer workspace" : "Job seeker workspace";
+  const workspaceKind = user.role === "admin" ? "admin" : user.accountType === "employer" ? "employer" : "seeker";
+  const isSeeker = workspaceKind === "seeker";
   const savePhone = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     try {
@@ -36,7 +38,7 @@ export default function Profile() {
   };
 
   return (
-    <main className="profile-page">
+    <main className={`profile-page profile-page--${workspaceKind}`}>
       <div className="profile-page-glow" />
       <div className="profile-shell">
         <Link href="/dashboard" className="profile-back"><ArrowLeft size={16} /> Back to workspace</Link>
@@ -50,7 +52,7 @@ export default function Profile() {
           <div className="profile-detail-item"><BriefcaseBusiness size={18} /><div><span>Account type</span><strong>{accountLabel}</strong></div></div>
           <div className="profile-detail-item"><ShieldCheck size={18} /><div><span>Access level</span><strong>{role}</strong></div></div>
         </section>
-        <section className="profile-contact-panel" aria-labelledby="profile-contact-title">
+        {isSeeker && <section className="profile-contact-panel" aria-labelledby="profile-contact-title">
           <div className="profile-contact-copy"><div className="profile-contact-icon"><Phone size={19} /></div><div><p className="profile-eyebrow">URGENT VACANCY ALERTS</p><h2 id="profile-contact-title">Add your mobile number</h2><p>We will use this number for urgent vacancy SMS alerts only when SMS delivery is approved and configured. Email and in-app alerts remain controlled by your notification preferences.</p></div></div>
           <form className="profile-contact-form" onSubmit={savePhone}>
             <label htmlFor="profile-phone">Tanzania mobile number</label>
@@ -58,8 +60,9 @@ export default function Profile() {
             <small id="profile-phone-help">Use a Tanzania mobile number. You can clear it any time.</small>
             {updatePhone.isSuccess && <span className="profile-contact-success" role="status"><CheckCircle2 size={14} /> Contact preference saved.</span>}
           </form>
-        </section>
-        <section className="profile-next-step"><div><p className="profile-eyebrow">NEXT STEP</p><h2>Complete your professional profile</h2><p>Add your CV, education, work experience, skills, and certification details from your workspace.</p></div><Button onClick={() => window.location.assign("/dashboard")} className="profile-primary-button">Open workspace</Button></section>
+        </section>}
+        {isSeeker && <section className="profile-next-step"><div><p className="profile-eyebrow">NEXT STEP</p><h2>Complete your professional profile</h2><p>Add your CV, education, work experience, skills, and certification details from your workspace.</p></div><Button onClick={() => window.location.assign("/dashboard")} className="profile-primary-button">Open workspace</Button></section>}
+        {!isSeeker && <section className="profile-next-step"><div><p className="profile-eyebrow">NEXT STEP</p><h2>{workspaceKind === "admin" ? "Head back to the admin control center" : "Manage your vacancies and candidates"}</h2><p>{workspaceKind === "admin" ? "Review moderation queues, platform settings, and marketplace activity from your workspace." : "Post vacancies, review applications, and manage your company profile from your workspace."}</p></div><Button onClick={() => window.location.assign("/dashboard")} className="profile-primary-button">Open workspace</Button></section>}
       </div>
     </main>
   );
