@@ -7,5 +7,4 @@ dist
 launch-deck
 leadership-security-deck
 docs
-scripts/*.mjs
 .tmp-*.mjs
