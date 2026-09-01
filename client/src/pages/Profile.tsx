@@ -20,16 +20,16 @@ export default function Profile() {
   }, [user?.phone]);
 
   if (loading || !user) {
-    return <main className="profile-page profile-loading"><div className="profile-loading-mark">K</div><p>Inafungua wasifu wako salama…</p></main>;
+    return <main className="profile-page profile-loading"><div className="profile-loading-mark">K</div><p>Opening your secure profile…</p></main>;
   }
 
   const role = user.role === "admin" ? "Admin" : user.accountType === "employer" ? "Employer" : "Job seeker";
-  const accountLabel = user.accountType === "employer" ? "Employer workspace" : user.role === "admin" ? "Admin workspace" : "Job seeker workspace";
+  const accountLabel = user.role === "admin" ? "Admin workspace" : user.accountType === "employer" ? "Employer workspace" : "Job seeker workspace";
   const savePhone = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     try {
       await updatePhone.mutateAsync({ phone: phone.trim() || null });
-      toast.success(phone.trim() ? "Namba ya simu imehifadhiwa" : "Namba ya simu imeondolewa");
+      toast.success(phone.trim() ? "Phone number saved" : "Phone number removed");
     } catch (error) {
       toast.error(error instanceof Error ? error.message : "Unable to update phone number");
     }
@@ -39,10 +39,10 @@ export default function Profile() {
     <main className="profile-page">
       <div className="profile-page-glow" />
       <div className="profile-shell">
-        <Link href="/dashboard" className="profile-back"><ArrowLeft size={16} /> Rudi kwenye workspace</Link>
+        <Link href="/dashboard" className="profile-back"><ArrowLeft size={16} /> Back to workspace</Link>
         <section className="profile-hero" aria-labelledby="profile-title">
           <div className="profile-avatar"><UserRound size={30} /><span>{initials(user.name)}</span></div>
-          <div><p className="profile-eyebrow">YOUR KAZIPOA PROFILE</p><h1 id="profile-title">Karibu, {user.name || "Kazipoa member"}.</h1><p className="profile-intro">Huu ni wasifu wako binafsi. Taarifa hizi zinaonekana kwenye akaunti yako tu.</p></div>
+          <div><p className="profile-eyebrow">YOUR KAZIPOA PROFILE</p><h1 id="profile-title">Welcome, {user.name || "Kazipoa member"}.</h1><p className="profile-intro">This is your personal profile. This information is only visible on your own account.</p></div>
           <span className="profile-status"><BadgeCheck size={15} /> Active account</span>
         </section>
         <section className="profile-details" aria-label="Profile details">

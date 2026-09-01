@@ -981,8 +981,8 @@ h1,h2,h3,strong,.brand-mark { font-family:Sora,Inter,sans-serif; }
 .custom-auth-strength-strong { color:#c9f08b; }
 .custom-auth-strength-strong .custom-auth-strength-bars i { background:#9cd45a; }
 
-.profile-page { position:relative; min-height:100vh; overflow:hidden; background:#09100d; color:#f5f7f2; padding:34px 20px 70px; }
-.profile-page-glow { position:absolute; inset:0; pointer-events:none; background:radial-gradient(circle at 82% 14%, rgba(156,212,90,.18), transparent 30%), linear-gradient(135deg, rgba(13,29,22,.96), #090e0d 68%); }
+.profile-page { position:relative; min-height:100vh; overflow:hidden; background:#070b09; color:#f5f7f2; padding:34px 20px 70px; }
+.profile-page-glow { position:absolute; inset:0; pointer-events:none; background-image:radial-gradient(circle at 85% 8%, rgba(156,212,90,.28), transparent 38%), radial-gradient(circle at 8% 92%, rgba(78,168,120,.16), transparent 42%), radial-gradient(circle at 50% 45%, rgba(156,212,90,.05), transparent 60%), repeating-linear-gradient(120deg, rgba(255,255,255,.025) 0px, rgba(255,255,255,.025) 1px, transparent 1px, transparent 64px), repeating-linear-gradient(30deg, rgba(255,255,255,.02) 0px, rgba(255,255,255,.02) 1px, transparent 1px, transparent 64px), linear-gradient(160deg, #0d1d16 0%, #0a1310 45%, #070b09 100%); }
 .profile-shell { position:relative; width:min(100%, 940px); margin:0 auto; }
 .profile-back { display:inline-flex; align-items:center; gap:8px; color:#b9df71; font-size:13px; font-weight:700; text-decoration:none; margin-bottom:42px; }
 .profile-back:hover { color:#e2ffc0; }
