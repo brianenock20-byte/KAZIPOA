@@ -42,7 +42,7 @@ async function main() {
   }
 
   const emailNormalized = emailArg.trim().toLowerCase();
-  const conn = await mysql.createConnection({ uri: process.env.DATABASE_URL, ssl: { rejectUnauthorized: true } });
+  const conn = await mysql.createConnection({ uri: process.env.DATABASE_URL });
 
   try {
     const [existingUsers] = await conn.execute("SELECT id, role FROM users WHERE email = ? LIMIT 1", [emailNormalized]);
