@@ -33,7 +33,7 @@ export default function EmployerMarketplacePage() {
   if (!isAuthenticated) {
     return (
       <div className="employer-marketplace-route">
-        <header className="site-header"><div className="container nav-inner"><a className="logo-link" href="/"><span className="brand-mark"><img src="/manus-storage/kazipoa-k-mark_e85d7abf.png" alt="" /><span>KAZIPOA</span></span></a></div></header>
+        <header className="site-header"><div className="container nav-inner"><a className="logo-link" href="/"><span className="brand-mark"><img src="/kazipoa-mark.png" alt="" /><span>KAZIPOA</span></span></a></div></header>
         <main className="employer-marketplace-route-main container">
           <section className="employer-marketplace-access-state" role="status">
             <BriefcaseBusiness size={28} />
@@ -50,7 +50,7 @@ export default function EmployerMarketplacePage() {
   if (!isEmployer) {
     return (
       <div className="employer-marketplace-route">
-        <header className="site-header"><div className="container nav-inner"><a className="logo-link" href="/"><span className="brand-mark"><img src="/manus-storage/kazipoa-k-mark_e85d7abf.png" alt="" /><span>KAZIPOA</span></span></a></div></header>
+        <header className="site-header"><div className="container nav-inner"><a className="logo-link" href="/"><span className="brand-mark"><img src="/kazipoa-mark.png" alt="" /><span>KAZIPOA</span></span></a></div></header>
         <main className="employer-marketplace-route-main container">
           <section className="employer-marketplace-access-state" role="alert">
             <ShieldAlert size={28} />
@@ -66,7 +66,7 @@ export default function EmployerMarketplacePage() {
 
   return (
     <div className="employer-marketplace-route">
-      <header className="site-header"><div className="container nav-inner"><a className="logo-link" href="/"><span className="brand-mark"><img src="/manus-storage/kazipoa-k-mark_e85d7abf.png" alt="" /><span>KAZIPOA</span></span></a><nav className="nav-links" aria-label="Employer navigation"><a href="/dashboard">My workplace</a></nav><div className="nav-actions"><a className="ghost-button" href="/dashboard">My workplace</a></div></div></header>
+      <header className="site-header"><div className="container nav-inner"><a className="logo-link" href="/"><span className="brand-mark"><img src="/kazipoa-mark.png" alt="" /><span>KAZIPOA</span></span></a><nav className="nav-links" aria-label="Employer navigation"><a href="/dashboard">My workplace</a></nav><div className="nav-actions"><a className="ghost-button" href="/dashboard">My workplace</a></div></div></header>
       <main className="employer-marketplace-route-main container">
         <div className="employer-marketplace-route-intro"><a className="back-button" href="/dashboard"><ArrowLeft size={14} /> Back to workplace</a><p className="eyebrow">EMPLOYER POSTINGS</p><h1>Manage your own vacancies.</h1><p>Only your posted roles appear here. Use History and filters to find a posting, review its applicants and views, or open the full details.</p></div>
         <EmployerVacancyManagement metrics={metricsQuery.data ?? []} />

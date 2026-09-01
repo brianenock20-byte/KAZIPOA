@@ -19,24 +19,7 @@ const heroAssets: Record<PortfolioRole, { eyebrow: string; title: string }> = {
 
 export function KazipoaBrand({ className = "" }: { className?: string }) {
   return <span className={`brand-mark ${className}`.trim()}>
-    <span className="brand-mark-glyph" aria-hidden="true">
-      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <linearGradient id="kazipoaGlyphBg" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0%" stopColor="#4ade94" />
-            <stop offset="100%" stopColor="#159a5b" />
-          </linearGradient>
-        </defs>
-        <rect x="2" y="2" width="96" height="96" rx="24" fill="url(#kazipoaGlyphBg)" />
-        <g fill="none" stroke="#0a1120" strokeWidth="9" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M38 78 C24 70 18 56 22 42 C25 31 33 22 44 17" fill="#0a1120" stroke="none" />
-          <path d="M60 82 L83 55" />
-          <path d="M60 82 L38 82" />
-          <path d="M52 50 L83 18" />
-        </g>
-        <path d="M70 14 L88 19 L83 37 Z" fill="#0a1120" />
-      </svg>
-    </span>
+    <img className="brand-mark-glyph" src="/kazipoa-mark.png" alt="" aria-hidden="true" />
     <span>KAZIPOA</span>
   </span>;
 }
