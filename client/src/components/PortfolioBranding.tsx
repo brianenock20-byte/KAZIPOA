@@ -2,35 +2,49 @@ import React, { type ReactNode } from "react";
 
 export type PortfolioRole = "seeker" | "employer" | "admin";
 
-const heroAssets: Record<PortfolioRole, { src: string; alt: string; eyebrow: string; title: string }> = {
+const heroAssets: Record<PortfolioRole, { eyebrow: string; title: string }> = {
   seeker: {
-    src: "/manus-storage/kazipoa-seeker-workplace-hero_bc5c1182.jpg",
-    alt: "Job seeker reviewing a professional portfolio",
     eyebrow: "Career portfolio",
     title: "Show your next move.",
   },
   employer: {
-    src: "/manus-storage/kazipoa-employer-workplace-hero_6341c303.jpg",
-    alt: "Hiring team reviewing candidate profiles",
     eyebrow: "Hiring workspace",
     title: "Build a stronger team.",
   },
   admin: {
-    src: "/manus-storage/kazipoa-admin-workplace-hero_b5170b35.jpg",
-    alt: "Admin operations professional monitoring recruitment activity",
     eyebrow: "Trust operations",
     title: "Keep the marketplace trusted.",
   },
 };
 
 export function KazipoaBrand({ className = "" }: { className?: string }) {
-  return <span className={`brand-mark ${className}`.trim()}><img src="/manus-storage/kazipoa-brand-mark_72c8b243.png" alt="" /><span>KAZIPOA</span></span>;
+  return <span className={`brand-mark ${className}`.trim()}>
+    <span className="brand-mark-glyph" aria-hidden="true">
+      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="kazipoaGlyphBg" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stopColor="#4ade94" />
+            <stop offset="100%" stopColor="#159a5b" />
+          </linearGradient>
+        </defs>
+        <rect x="2" y="2" width="96" height="96" rx="24" fill="url(#kazipoaGlyphBg)" />
+        <g fill="none" stroke="#0a1120" strokeWidth="9" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M38 78 C24 70 18 56 22 42 C25 31 33 22 44 17" fill="#0a1120" stroke="none" />
+          <path d="M60 82 L83 55" />
+          <path d="M60 82 L38 82" />
+          <path d="M52 50 L83 18" />
+        </g>
+        <path d="M70 14 L88 19 L83 37 Z" fill="#0a1120" />
+      </svg>
+    </span>
+    <span>KAZIPOA</span>
+  </span>;
 }
 
 export function PortfolioHero({ role }: { role: PortfolioRole }) {
   const asset = heroAssets[role];
   return <div className={`workplace-hero-image workplace-hero-${role}`} data-portfolio-hero={role}>
-    <img src={asset.src} alt={asset.alt} />
+    <div className="workplace-hero-art" aria-hidden="true" />
     <div className="workplace-hero-overlay"><span>{asset.eyebrow}</span><strong>{asset.title}</strong></div>
   </div>;
 }
