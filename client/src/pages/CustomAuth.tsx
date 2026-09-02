@@ -123,7 +123,7 @@ function AuthShell({ children, eyebrow, title, description }: { children: React.
   return (
     <main className="custom-auth-page" data-auth-layout="kazipoa-premium-v2">
       <section className="custom-auth-visual" aria-label="Kazipoa secure access">
-        <div className="custom-auth-visual-art" aria-hidden="true" />
+        <img src="/kazipoa-hero-login.jpg" alt="Professional at work in a Tanzanian office" />
         <div className="custom-auth-visual-scrim" />
         <div className="custom-auth-visual-copy">
           <Link href="/" className="custom-auth-back"><ArrowLeft size={15} /> Back to Kazipoa</Link>
