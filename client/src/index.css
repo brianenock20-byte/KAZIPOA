@@ -4332,7 +4332,7 @@ html.dark .company-avatar,html.dark .user-avatar{background:#173b2a;color:#72e0b
   padding-left: 0;
   padding-right: 0;
 }
-.site-header .logo-link { margin-left: 20px; }
+.site-header .logo-link { margin-left: clamp(20px, 4vw, 48px); }
 .site-header .nav-actions { margin-right: 0; }
 .site-header .brand-mark { min-width: max-content; }
 .site-header .brand-mark img { width: 32px; height: 32px; object-fit: contain; }
@@ -4344,7 +4344,7 @@ html.dark .company-avatar,html.dark .user-avatar{background:#173b2a;color:#72e0b
   justify-content: space-between;
   gap: 12px;
   margin: -4px 0 16px;
-  padding: 0 0 14px 20px;
+  padding: 0 0 14px clamp(28px, 6vw, 64px);
   border-bottom: 1px solid rgba(24,183,122,.22);
 }
 .role-brand-strip a {
