@@ -808,7 +808,7 @@ h1,h2,h3,strong,.brand-mark { font-family:Sora,Inter,sans-serif; }
 .custom-auth-trust-row { display:inline-flex; align-items:center; gap:8px; margin-top:28px; padding-top:18px; border-top:1px solid rgba(255,255,255,.22); color:rgba(255,255,255,.84); font-size:13px; }
 .custom-auth-panel { display:flex; align-items:center; justify-content:center; min-width:0; padding:48px clamp(24px,6vw,84px); background:#241A05; color:#fff; }
 .custom-auth-panel-inner { width:min(100%,460px); }
-.custom-auth-brand-mark { width:42px; height:42px; display:grid; place-items:center; margin-bottom:34px; border-radius:13px; background:#B9DF71; color:var(--navy); font-size:22px; font-weight:800; box-shadow:0 12px 26px rgba(185,223,113,.22); }
+.custom-auth-brand-mark { width:42px; height:42px; display:grid; place-items:center; margin-bottom:34px; border-radius:13px; object-fit:contain; }
 .custom-auth-eyebrow { margin:0 0 10px; color:#B9DF71; font-size:12px; font-weight:800; letter-spacing:.14em; text-transform:uppercase; }
 .custom-auth-panel h2 { margin:0; color:#fff; font-size:clamp(30px,4vw,44px); line-height:1.04; letter-spacing:-.04em; }
 .custom-auth-description { max-width:430px; margin:14px 0 30px; color:rgba(255,255,255,.68); line-height:1.6; }
@@ -926,7 +926,7 @@ h1,h2,h3,strong,.brand-mark { font-family:Sora,Inter,sans-serif; }
 .custom-auth-visual-badge { margin-top:10px; }
 .custom-auth-panel { position:relative; z-index:2; display:flex; align-items:center; justify-content:center; width:min(100%, 430px); min-width:0; padding:0; background:transparent; color:#fff; }
 .custom-auth-panel-inner { width:100%; padding:32px 30px 28px; border:1px solid rgba(255,255,255,.12); border-radius:18px; background:rgba(27,29,29,.96); box-shadow:0 28px 90px rgba(0,0,0,.58), inset 0 1px 0 rgba(255,255,255,.04); backdrop-filter:blur(18px); }
-.custom-auth-brand-mark { width:48px; height:48px; margin:0 auto 24px; border-radius:14px; background:linear-gradient(145deg,#b9df71,#56a83d); color:#0b1510; box-shadow:0 12px 30px rgba(98,180,71,.25); }
+.custom-auth-brand-mark { width:48px; height:48px; margin:0 auto 24px; border-radius:14px; object-fit:contain; }
 .custom-auth-eyebrow { margin-bottom:12px; color:#b9df71; text-align:center; font-size:11px; letter-spacing:.16em; }
 .custom-auth-panel h2 { color:#f8faf7; font-size:clamp(28px,6vw,36px); line-height:1.08; text-align:center; letter-spacing:-.035em; }
 .custom-auth-description { max-width:330px; margin:12px auto 26px; color:rgba(255,255,255,.6); font-size:13px; line-height:1.55; text-align:center; }
@@ -1017,7 +1017,8 @@ h1,h2,h3,strong,.brand-mark { font-family:Sora,Inter,sans-serif; }
 @media (max-width:700px) { .profile-page { padding:24px 16px 52px; } .profile-back { margin-bottom:30px; } .profile-hero { grid-template-columns:auto 1fr; gap:15px; } .profile-status { grid-column:2; } .profile-details { grid-template-columns:1fr; } .profile-next-step { display:grid; gap:20px; padding:23px; } .profile-primary-button { width:100%; } }
 
 
-.admin-console{display:grid;grid-template-columns:220px minmax(0,1fr);gap:24px;margin:28px 0 34px;position:relative}.admin-sidebar{background:#101b1a;color:#f5fbf5;padding:20px 14px;min-height:560px;display:flex;flex-direction:column;gap:24px}.admin-sidebar-head{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}.admin-sidebar-head strong{font-size:18px}.admin-sidebar-close,.admin-mobile-menu{display:none}.admin-sidebar nav{display:grid;gap:6px}.admin-nav-item{display:flex;align-items:center;gap:10px;border:0;background:transparent;color:#b8c9c2;text-align:left;padding:11px 10px;font:inherit;cursor:pointer}.admin-nav-item:hover,.admin-nav-item.active{background:#173f32;color:#c8ff72}.admin-sidebar-note{margin-top:auto;border-top:1px solid #2b4540;padding-top:16px;color:#9cb2aa;font-size:12px;display:flex;gap:8px;line-height:1.5}.admin-console-main{min-width:0}.admin-console-heading{display:flex;align-items:flex-start;justify-content:space-between;gap:18px;margin-bottom:18px}.admin-console-heading h2{margin:0 0 6px;font-size:32px}.admin-console-heading p{margin:0;color:#60716c}.admin-live-badge{display:inline-flex;align-items:center;gap:6px;background:#e7f8e6;color:#23653a;padding:8px 11px;font-size:12px;font-weight:700}.admin-stat-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-bottom:16px}.admin-stat{background:#fff;border:1px solid #dbe6df;padding:17px}.admin-stat span,.admin-stat small{display:block;color:#6c7d77;font-size:12px}.admin-stat strong{display:block;color:#14221f;font-size:30px;margin:8px 0 2px}.admin-chart-panel,.admin-users-panel,.admin-placeholder-panel{background:#fff;border:1px solid #dbe6df;padding:20px;margin-top:16px}.admin-chart-panel .panel-heading,.admin-users-panel .panel-heading{display:flex;align-items:center;justify-content:space-between;gap:12px}.admin-chart-panel h3,.admin-users-panel h3{margin:0;font-size:20px}.admin-trend-chart{height:220px;display:flex;align-items:stretch;gap:8px;border-bottom:1px solid #cfddd6;padding:18px 4px 0}.admin-trend-column{flex:1;min-width:0;display:flex;flex-direction:column;justify-content:flex-end;gap:8px}.admin-trend-bars{height:180px;display:flex;align-items:flex-end;justify-content:center;gap:3px}.trend-bar{display:block;width:10px;min-height:4px;background:#87b84a}.trend-bar.employer,.legend-dot.employer{background:#1c7152}.trend-bar.seeker,.legend-dot.seeker{background:#b5db5d}.admin-trend-column small{font-size:10px;color:#6c7d77;text-align:center;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.admin-chart-legend{display:flex;gap:18px;margin-top:12px;color:#5e706a;font-size:12px}.admin-chart-legend span{display:inline-flex;align-items:center;gap:6px}.legend-dot{display:inline-block;width:9px;height:9px}.admin-user-list{display:grid;gap:1px;background:#dbe6df;margin-top:15px}.admin-user-row{background:#fff;display:flex;align-items:center;justify-content:space-between;gap:14px;padding:14px}.admin-user-row.blocked{background:#fff8ef}.admin-user-identity{min-width:0;display:grid;gap:3px}.admin-user-identity strong{color:#172521}.admin-user-identity span,.admin-user-identity small{color:#6c7d77;overflow-wrap:anywhere}.admin-user-identity small{font-size:12px}.admin-user-actions{display:flex;align-items:center;gap:8px;flex-wrap:wrap;justify-content:flex-end}.blocked-label{font-size:12px;font-weight:700;color:#9a5b1b;background:#fff0d7;padding:6px 8px}.admin-placeholder-panel{text-align:center;padding:40px;color:#58706a}.admin-placeholder-panel h3{color:#172521;margin:12px 0 6px}.admin-confirm-modal{max-width:480px}
+.admin-console{display:grid;grid-template-columns:220px minmax(0,1fr);gap:24px;margin:28px 0 34px;position:relative}.admin-sidebar{background:#101b1a;color:#f5fbf5;padding:20px 14px;min-height:560px;display:flex;flex-direction:column;gap:24px}.admin-sidebar-head{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}.admin-sidebar-head strong{font-size:18px}.admin-sidebar-close,.admin-mobile-menu{display:none}.admin-sidebar nav{display:grid;gap:6px}.admin-nav-item{display:flex;align-items:center;gap:10px;border:0;background:transparent;color:#b8c9c2;text-align:left;padding:11px 10px;font:inherit;cursor:pointer}.admin-nav-item:hover,.admin-nav-item.active{background:#173f32;color:#c8ff72}.admin-sidebar-note{margin-top:auto;border-top:1px solid #2b4540;padding-top:16px;color:#9cb2aa;font-size:12px;display:flex;gap:8px;line-height:1.5}.admin-console-main{min-width:0}.admin-console-heading{display:flex;align-items:flex-start;justify-content:space-between;gap:18px;margin-bottom:18px}.admin-console-heading h2{margin:0 0 6px;font-size:32px}.admin-console-heading p{margin:0;color:#60716c}.admin-live-badge{display:inline-flex;align-items:center;gap:6px;background:#e7f8e6;color:#23653a;padding:8px 11px;font-size:12px;font-weight:700}.admin-stat-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-bottom:16px}.admin-stat{background:#fff;border:1px solid #dbe6df;padding:17px}.admin-stat span,.admin-stat small{display:block;color:#6c7d77;font-size:12px}.admin-stat strong{display:block;color:#14221f;font-size:30px;margin:8px 0 2px}.admin-chart-panel,.admin-users-panel,.admin-placeholder-panel{background:#fff;border:1px solid #dbe6df;padding:20px;margin-top:16px}.admin-chart-panel .panel-heading,.admin-users-panel .panel-heading{display:flex;align-items:center;justify-content:space-between;gap:12px}.admin-chart-panel h3,.admin-users-panel h3{margin:0;font-size:20px}.admin-trend-chart{height:220px;display:flex;align-items:stretch;gap:8px;border-bottom:1px solid #cfddd6;padding:18px 4px 0}.admin-trend-column{flex:1;min-width:0;display:flex;flex-direction:column;justify-content:flex-end;gap:8px}.admin-trend-bars{height:180px;display:flex;align-items:flex-end;justify-content:center;gap:3px}.trend-bar{display:block;width:10px;min-height:4px;background:#87b84a}.trend-bar.employer,.legend-dot.employer{background:#1c7152}.trend-bar.seeker,.legend-dot.seeker{background:#b5db5d}.admin-trend-column small{font-size:10px;color:#6c7d77;text-align:center;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.admin-chart-legend{display:flex;gap:18px;margin-top:12px;color:#5e706a;font-size:12px}.admin-chart-legend span{display:inline-flex;align-items:center;gap:6px}.legend-dot{display:inline-block;width:9px;height:9px}.admin-user-list{display:grid;gap:1px;background:#dbe6df;margin-top:15px}.admin-user-row{background:#fff;display:flex;align-items:center;justify-content:space-between;gap:14px;padding:14px}.admin-user-row.blocked{background:#fff8ef}.admin-user-identity{min-width:0;display:grid;gap:3px}.admin-user-identity strong{color:#172521}.admin-user-identity span,.admin-user-identity small{color:#6c7d77;overflow-wrap:anywhere}.admin-user-identity small{font-size:12px}.admin-user-actions{display:flex;align-items:center;gap:8px;flex-wrap:wrap;justify-content:flex-end}.blocked-label{font-size:12px;font-weight:700;color:#9a5b1b;background:#fff0d7;padding:6px 8px}.admin-placeholder-panel{text-align:center;padding:40px;color:#58706a}
+.admin-placeholder-image{width:100%;max-width:520px;height:auto;border-radius:12px;margin:0 auto 22px;display:block;box-shadow:0 12px 30px rgba(15,43,33,.14)}.admin-placeholder-panel h3{color:#172521;margin:12px 0 6px}.admin-confirm-modal{max-width:480px}
 @media (max-width:900px){.admin-console{display:block}.admin-mobile-menu{display:inline-flex;margin-bottom:12px;align-items:center;gap:8px;background:#101b1a;color:#c8ff72;border:0;padding:10px 12px;font:inherit;font-weight:700;cursor:pointer}.admin-sidebar{display:none;position:fixed;z-index:60;inset:0 auto 0 0;width:280px;min-height:100vh}.admin-sidebar.open{display:flex}.admin-sidebar-close{display:inline-flex;background:transparent;border:0;color:#c8ff72;padding:3px}.admin-sidebar-scrim{display:block;position:fixed;inset:0;background:rgba(5,16,14,.52);border:0;z-index:50}.admin-stat-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.admin-trend-chart{overflow-x:auto;min-width:680px}.admin-chart-panel{overflow-x:auto}.admin-user-row{align-items:flex-start;flex-direction:column}.admin-user-actions{justify-content:flex-start}}
 @media (max-width:520px){.admin-stat-grid{grid-template-columns:1fr 1fr}.admin-console-heading{display:block}.admin-live-badge{margin-top:12px}.admin-console-heading h2{font-size:26px}.admin-stat strong{font-size:24px}.admin-chart-panel,.admin-users-panel{padding:14px}.admin-user-actions{width:100%}.admin-user-actions button{flex:1;justify-content:center}}
 
@@ -1656,8 +1657,8 @@ html.dark .vacancy-theme-operations { --vacancy-accent:#A6C76A; --vacancy-soft:#
 html.dark .public-vacancy-page .public-vacancy-heading { background:linear-gradient(135deg,var(--vacancy-soft),#181C19 70%); }
 
 /* Role portfolio workplace imagery */
-.workplace-hero-image { position:relative; min-height:220px; margin:0 0 28px; overflow:hidden; border-radius:18px; background:#EAF2EE; border:1px solid rgba(18,122,87,.18); }
-.workplace-hero-image img { display:block; width:100%; height:260px; object-fit:contain; object-position:center; background:#0a1120; }
+.workplace-hero-image { position:relative; min-height:0; margin:0 0 28px; overflow:hidden; border-radius:18px; background:#EAF2EE; border:1px solid rgba(18,122,87,.18); }
+.workplace-hero-image img { display:block; width:100%; height:auto; }
 .workplace-hero-art { position:absolute; inset:0; background-repeat:no-repeat; background-position:center; background-size:cover; }
 .workplace-hero-seeker .workplace-hero-art { background-image:url("/hero-seeker.jpg"); }
 .workplace-hero-employer .workplace-hero-art { background-image:url("/hero-employer.jpg"); }
@@ -1673,7 +1674,7 @@ html.dark .public-vacancy-page .public-vacancy-heading { background:linear-gradi
 .workplace-hero-admin { border-color:rgba(138,90,22,.32); }
 html.dark .workplace-hero-image { background:#17251C; border-color:rgba(114,224,177,.24); }
 html.dark .workplace-hero-image::after { background:linear-gradient(90deg,rgba(7,16,12,.9) 0%,rgba(7,16,12,.56) 44%,rgba(7,16,12,.08) 80%); }
-@media (max-width:700px) { .workplace-hero-image { min-height:190px; margin-bottom:20px; border-radius:14px; } .workplace-hero-image img { height:210px; } .workplace-hero-overlay { left:18px; right:18px; } .workplace-hero-overlay strong { font-size:1.55rem; } }
+@media (max-width:700px) { .workplace-hero-image { min-height:0; margin-bottom:20px; border-radius:14px; }  .workplace-hero-overlay { left:18px; right:18px; } .workplace-hero-overlay strong { font-size:1.55rem; } }
 
 /* Side workplace portrait beside role portfolio forms */
 .portfolio-editor, .employer-portfolio, .admin-settings-panel { position:relative; overflow:hidden; }
@@ -2029,7 +2030,7 @@ html.dark .filter-row select { background: #111516; color: #FFFFFF; border-color
   padding: 24px 24px 34px;
   background: linear-gradient(135deg,#151937 0%,#10132f 100%);
 }
-.workplace-admin .workplace-hero-image { min-height:190px; border-radius:12px; border:1px solid rgba(174,191,235,.14); }
+.workplace-admin .workplace-hero-image { min-height:0; border-radius:12px; border:1px solid rgba(174,191,235,.14); }
 .workplace-admin .workplace-hero-image::after { background:linear-gradient(90deg,rgba(12,16,48,.9),rgba(20,25,55,.48),rgba(12,16,48,.76)); }
 .workplace-admin .workplace-hero-overlay span { color:#7bdcb1; }
 .workplace-admin .workplace-hero-overlay strong { color:#fff; }
@@ -2101,8 +2102,8 @@ html.dark .filter-row select { background: #111516; color: #FFFFFF; border-color
 .workplace-admin .admin-analytics-container .analytics-month > small,.workplace-admin .admin-analytics-container .analytics-legend { color:#9aa6c4; }
 .workplace-admin .admin-analytics-container .analytics-bar.payments,.workplace-admin .admin-analytics-container .analytics-legend-dot.payments { background:#ffd16a; }
 @media (max-width:1100px) { .workplace-admin .dashboard-layout { padding-left:18px; padding-right:18px; } }
-@media (max-width:900px) { .workplace-admin .dashboard-layout { display:block; padding:0 16px 28px; border:0; box-shadow:none; } .workplace-admin .dashboard-sidebar { top:0; min-height:100vh; background:#121633; } .workplace-admin .dashboard-content { padding:18px 0 24px; } .workplace-admin .workplace-hero-image { min-height:170px; } }
-@media (max-width:560px) { .workplace-admin .dashboard-layout { padding-left:12px; padding-right:12px; } .workplace-admin .workplace-hero-image { min-height:150px; } .workplace-admin .workplace-hero-overlay strong { font-size:24px; } }
+@media (max-width:900px) { .workplace-admin .dashboard-layout { display:block; padding:0 16px 28px; border:0; box-shadow:none; } .workplace-admin .dashboard-sidebar { top:0; min-height:100vh; background:#121633; } .workplace-admin .dashboard-content { padding:18px 0 24px; } .workplace-admin .workplace-hero-image { min-height:0; } }
+@media (max-width:560px) { .workplace-admin .dashboard-layout { padding-left:12px; padding-right:12px; } .workplace-admin .workplace-hero-image { min-height:0; } .workplace-admin .workplace-hero-overlay strong { font-size:24px; } }
 
 /* Admin hierarchy refinement: the trust hero is the introduction; operations start at YOUR WORKSPACE. */
 .workplace-admin .workplace-hero-image {
@@ -2130,11 +2131,11 @@ html.dark .filter-row select { background: #111516; color: #FFFFFF; border-color
 .workplace-admin .dash-heading h1 { max-width: 760px; }
 .workplace-admin .role-guide { margin-top: 20px; }
 @media (max-width:900px) {
-  .workplace-admin .workplace-hero-image { min-height: 184px; }
+  .workplace-admin .workplace-hero-image { min-height: 0; }
   .workplace-admin .dash-heading { margin-top: 18px; padding-top: 18px; }
 }
 @media (max-width:560px) {
-  .workplace-admin .workplace-hero-image { min-height: 158px; }
+  .workplace-admin .workplace-hero-image { min-height: 0; }
   .workplace-admin .dash-heading { padding-left: 0; padding-right: 0; }
 }
 
@@ -4328,7 +4329,7 @@ html.dark .company-avatar,html.dark .user-avatar{background:#173b2a;color:#72e0b
   padding-left: 0;
   padding-right: 0;
 }
-.site-header .logo-link { margin-left: 0; }
+.site-header .logo-link { margin-left: 10px; }
 .site-header .nav-actions { margin-right: 0; }
 .site-header .brand-mark { min-width: max-content; }
 .site-header .brand-mark img { width: 32px; height: 32px; object-fit: contain; }
@@ -4360,12 +4361,12 @@ html.dark .company-avatar,html.dark .user-avatar{background:#173b2a;color:#72e0b
 
 /* Keep the three portfolio hero images as the visual start of the workspace. */
 .workplace-hero-image {
-  min-height: 250px;
+  min-height: 0;
   border-radius: 0;
   border-color: rgba(24,183,122,.28);
   box-shadow: 0 20px 50px rgba(0,0,0,.2);
 }
-.workplace-hero-image img { height: 300px; object-fit: contain; object-position: center; background:#0a1120; }
+.workplace-hero-image img { width: 100%; height: auto; }
 .workplace-hero-overlay { padding: 30px; }
 .workplace-hero-overlay strong { max-width: 620px; font-size: clamp(27px, 3vw, 42px); }
 
@@ -4380,7 +4381,7 @@ html.dark .company-avatar,html.dark .user-avatar{background:#173b2a;color:#72e0b
   .site-header .nav-actions { margin-right: 0; }
   .dashboard-page .dashboard-layout { padding-left: 0; padding-right: 0; }
   .dashboard-page .dashboard-content { padding-left: 12px; padding-right: 12px; }
-  .workplace-hero-image img { height: 230px; }
+  
   .workplace-hero-overlay { padding: 22px; }
   .workplace-hero-overlay strong { font-size: 28px; }
   .role-brand-strip { margin-top: 0; }

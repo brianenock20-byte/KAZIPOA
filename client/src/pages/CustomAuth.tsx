@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
 import { startLogin } from "@/const";
-import { storageUrl } from "@/lib/storageUrl";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { trpc } from "@/lib/trpc";
@@ -124,7 +123,7 @@ function AuthShell({ children, eyebrow, title, description }: { children: React.
   return (
     <main className="custom-auth-page" data-auth-layout="kazipoa-premium-v2">
       <section className="custom-auth-visual" aria-label="Kazipoa secure access">
-        <img src={storageUrl("kazipoa-hero_3140ef94.jpg")} alt="Professional at work in a Tanzanian workplace" />
+        <img src="/kazipoa-photo-employer.jpg" alt="Professionals collaborating at work in Tanzania" />
         <div className="custom-auth-visual-scrim" />
         <div className="custom-auth-visual-copy">
           <Link href="/" className="custom-auth-back"><ArrowLeft size={15} /> Back to Kazipoa</Link>
@@ -137,7 +136,7 @@ function AuthShell({ children, eyebrow, title, description }: { children: React.
       <section className="custom-auth-panel" aria-labelledby="custom-auth-title">
         <div className="custom-auth-theme-toggle"><ThemeToggle /></div>
         <div className="custom-auth-panel-inner">
-          <div className="custom-auth-brand-mark" aria-hidden="true">K</div>
+          <img className="custom-auth-brand-mark" src="/kazipoa-mark.png" alt="" aria-hidden="true" />
           <p className="custom-auth-eyebrow">{eyebrow}</p>
           <h2 id="custom-auth-title">{title}</h2>
           <p className="custom-auth-description">{description}</p>

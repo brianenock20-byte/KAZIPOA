@@ -33,8 +33,8 @@ const AdminVacancyPaymentAnalyticsPanel = lazy(() => import("@/components/AdminV
 const EmployerVacancyPreview = lazy(() => import("@/components/EmployerVacancyPreview"));
 import { ArrowRight, Bell, Bookmark, BriefcaseBusiness, Building2, CheckCircle2, ChevronDown, ChevronRight, CircleAlert, Clock3, CreditCard, FileText, Globe2, HeartHandshake, LogOut, MapPin, Menu, Search, Settings2, Share2, ShieldCheck, SlidersHorizontal, Sparkles, UserRound, X, Instagram, MessageCircle, Music2, Loader2 } from "lucide-react";
 
-const heroImage = storageUrl("kazipoa-hero_3140ef94.jpg");
-const safetyImage = storageUrl("kazipoa-safety_7dcd8a35.jpg");
+const heroImage = "/kazipoa-photo-employer.jpg";
+const safetyImage = "/kazipoa-photo-admin.jpg";
 const vacancyImages = { finance: storageUrl("kazipoa-vacancy-finance_d524c60a.png"), technology: storageUrl("kazipoa-vacancy-technology_d7d4b5a8.png"), healthcare: storageUrl("kazipoa-vacancy-healthcare_068847f1.png"), hospitality: storageUrl("kazipoa-vacancy-hospitality_3eea05ab.png"), operations: storageUrl("kazipoa-vacancy-operations_ddd08ff5.png"), marketing: storageUrl("kazipoa-vacancy-marketing_945307df.jpg"), legal: storageUrl("kazipoa-vacancy-legal_20ae0b26.jpg"), education: storageUrl("kazipoa-vacancy-education_847476c9.jpg"), agriculture: storageUrl("kazipoa-vacancy-agriculture_1165458e.jpg"), engineering: storageUrl("kazipoa-vacancy-engineering_83529c87.jpg"), business: storageUrl("kazipoa-vacancy-business_6e2eaa5a.jpg"), internship: storageUrl("kazipoa-vacancy-internship_64f77554.jpg") } as const;
 const workplaceImages = { seeker: storageUrl("kazipoa-seeker-workplace-hero_bc5c1182.jpg"), employer: storageUrl("kazipoa-employer-workplace-hero_6341c303.jpg"), admin: storageUrl("kazipoa-admin-workplace-hero_b5170b35.jpg") } as const;
 function getVacancyImage(job: Pick<Job, "category" | "title" | "description">) {
