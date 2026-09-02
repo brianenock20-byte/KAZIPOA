@@ -21,7 +21,7 @@ import { createMpesaPaymentIntent } from "./db";
 import { createMpesaProviderReference, pendingMpesaInitiation } from "./mpesaContract";
 import { TEST_VACANCY_BATCH_ID } from "../shared/testVacancy";
 import { buildCustomAuthPasswordResetEmail, buildCustomAuthVerificationEmail, buildEmployerPaymentStatusEmail, buildEmployerSupportTicketUpdateEmail, buildSupportTicketAutoReplyEmail, buildSupportTicketEmail, sendPostmarkEmail } from "./postmarkEmail";
-import { checkAuthRateLimit, consumeAuthToken, createAuthToken, createCustomSession, createOrAttachCredential, customAuthConfig, getAuthSubjectKey, getCredentialByEmail, hashCustomPassword, isCustomAuthEnabled, markCredentialVerified, normalizeEmail, recordAuthAttempt, recordAuthEvent, revokeAllCustomSessions, revokeCustomSession, updateCredentialPassword, validateCustomPassword, verifyCustomPassword } from "./customAuth";
+import { checkAuthRateLimit, consumeAuthToken, createAuthToken, createCustomSession, createOrAttachCredential, customAuthConfig, getAuthSubjectKey, getCredentialByEmail, getCredentialByUserId, hashCustomPassword, isCustomAuthEnabled, markCredentialVerified, normalizeEmail, recordAuthAttempt, recordAuthEvent, revokeAllCustomSessions, revokeCustomSession, updateCredentialPassword, validateCustomPassword, verifyCustomPassword } from "./customAuth";
 
 const seekerProcedure = protectedProcedure.use(async ({ ctx, next }) => { if (await getAccountType(ctx.user.id) !== "seeker") throw new TRPCError({ code: "FORBIDDEN", message: "This feature is available only in the Job Seeker workspace" }); return next({ ctx }); });
 const employerProcedure = protectedProcedure.use(async ({ ctx, next }) => { if (await getAccountType(ctx.user.id) !== "employer") throw new TRPCError({ code: "FORBIDDEN", message: "This feature is available only in the Employer workspace" }); return next({ ctx }); });
@@ -55,6 +55,11 @@ export const appRouter = router({
     }),
     setAccountType: protectedProcedure.input(z.object({ accountType: z.enum(["seeker", "employer"]) })).mutation(({ ctx, input }) => setAccountType(ctx.user.id, input.accountType)),
     customStatus: publicProcedure.query(() => ({ enabled: isCustomAuthEnabled() })),
+    emailVerificationStatus: protectedProcedure.query(async ({ ctx }) => {
+      const credential = await getCredentialByUserId(ctx.user.id);
+      if (!credential) return { hasCredential: false, verified: true } as const;
+      return { hasCredential: true, verified: Boolean(credential.emailVerifiedAt), email: credential.emailNormalized } as const;
+    }),
     customRegister: publicProcedure.input(z.object({ name: z.string().trim().min(2).max(180), email: z.string().email().max(320), password: z.string().min(1).max(128), accountType: z.enum(["seeker", "employer"]) })).mutation(async ({ ctx, input }) => {
       if (!isCustomAuthEnabled()) throw new TRPCError({ code: "PRECONDITION_FAILED", message: "Custom sign-in pilot is not enabled" });
       const passwordError = validateCustomPassword(input.password);
@@ -93,7 +98,6 @@ export const appRouter = router({
         await recordAuthEvent({ eventType: "login", success: false, req: ctx.req });
         throw new TRPCError({ code: "UNAUTHORIZED", message: "Email or password is incorrect" });
       }
-      if (!credential.emailVerifiedAt) throw new TRPCError({ code: "FORBIDDEN", message: "Please verify your email before signing in" });
       const user = await getUserById(credential.userId);
       if (!user) throw new TRPCError({ code: "UNAUTHORIZED", message: "Email or password is incorrect" });
       const session = await createCustomSession(user.id, input.rememberMe);
@@ -102,7 +106,7 @@ export const appRouter = router({
       ctx.res.cookie(CUSTOM_AUTH_COOKIE, session.token, { ...cookieOptions, maxAge: session.expiresAt.getTime() - Date.now() });
       await recordAuthAttempt(subjectKey, true);
       await recordAuthEvent({ userId: user.id, eventType: "login", success: true, req: ctx.req });
-      return { success: true, user } as const;
+      return { success: true, user, emailVerified: Boolean(credential.emailVerifiedAt) } as const;
     }),
     verifyEmail: publicProcedure.input(z.object({ token: z.string().min(20).max(200) })).mutation(async ({ ctx, input }) => {
       if (!isCustomAuthEnabled()) throw new TRPCError({ code: "PRECONDITION_FAILED", message: "Custom sign-in pilot is not enabled" });
