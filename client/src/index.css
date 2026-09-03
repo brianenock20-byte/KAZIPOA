@@ -13,7 +13,7 @@ button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible { 
 .skip-link:focus { transform:translateY(0); outline:3px solid #B5F0D2; outline-offset:3px; }
 h1,h2,h3,p { margin:0; }
 h1,h2,h3,strong,.brand-mark { font-family:Sora,Inter,sans-serif; }
-.container { width:min(1600px,calc(100% - 48px)); margin-inline:auto; }
+.container { width:calc(100% - 64px); margin-inline:auto; }
 .app-shell { min-height:100vh; overflow:hidden; }
 .site-header { position:sticky; top:0; z-index:30; background:rgba(11,19,43,.96); color:#fff; box-shadow:0 1px 0 rgba(255,255,255,.08); }
 .nav-inner { display:flex; align-items:center; min-height:72px; gap:28px; }
