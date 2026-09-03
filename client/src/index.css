@@ -4330,7 +4330,7 @@ html.dark .company-avatar,html.dark .user-avatar{background:#173b2a;color:#72e0b
   width: 100%;
   max-width: none;
   padding-left: max(24px, calc((100% - 1180px) / 2));
-  padding-right: max(24px, calc((100% - 1180px) / 2));
+  padding-right: 24px;
 }
 .site-header .nav-actions { margin-right: 0; }
 .site-header .brand-mark { min-width: max-content; }
