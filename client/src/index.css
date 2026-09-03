@@ -4315,7 +4315,7 @@ html.dark .company-avatar,html.dark .user-avatar{background:#173b2a;color:#72e0b
   .site-header .nav-inner { min-height: clamp(78px, calc(72px * var(--kazipoa-desktop-scale)), 94px); }
   .site-header .nav-links { gap: clamp(24px, calc(22px * var(--kazipoa-desktop-scale)), 34px); }
   .site-header .nav-actions { gap: clamp(10px, calc(10px * var(--kazipoa-desktop-scale)), 16px); }
-  .container { width: min(1240px, calc(100% - 64px)); }
+  .container { width: calc(100% - 64px); }
   .dashboard-layout { grid-template-columns: minmax(250px, 300px) minmax(0, 1fr); gap: clamp(42px, calc(50px * var(--kazipoa-desktop-scale)), 72px); }
   .dashboard-content { font-size: clamp(1rem, calc(1rem * var(--kazipoa-desktop-scale)), 1.18rem); }
   .dashboard-content .eyebrow, .dashboard-content .form-note, .dashboard-content .section-copy { font-size: .72em; }
