@@ -4309,7 +4309,7 @@ html.dark .company-avatar,html.dark .user-avatar{background:#173b2a;color:#72e0b
 
 /* Kazipoa visual scale and brand-edge refinement.
    Desktop uses layout tokens rather than CSS/browser zoom; mobile stays native-width. */
-:root { --kazipoa-desktop-scale: 1.3; }
+:root { --kazipoa-desktop-scale: 1; }
 #root { width: 100%; }
 @media (min-width: 901px) {
   .site-header .nav-inner { min-height: clamp(78px, calc(72px * var(--kazipoa-desktop-scale)), 94px); }
