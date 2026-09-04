@@ -25,7 +25,6 @@ import { KazipoaBrand, PortfolioShellBranding } from "@/components/PortfolioBran
 import DeadlineCountdown from "@/components/DeadlineCountdown";
 import type { EmployerVacancyPreviewDraft } from "@/components/EmployerVacancyPreview";
 import VacancyShareMenu from "@/components/VacancyShareMenu";
-import { storageUrl } from "@/lib/storageUrl";
 import SecureCvPreview from "@/components/SecureCvPreview";
 
 const AdminControlCenter = lazy(() => import("@/components/AdminControlCenter"));
@@ -35,8 +34,9 @@ import { ArrowRight, Bell, Bookmark, BriefcaseBusiness, Building2, CheckCircle2,
 
 const heroImage = "/kazipoa-hero-homepage.jpg";
 const safetyImage = "kazipoa-safety-art";
-const vacancyImages = { finance: storageUrl("kazipoa-vacancy-finance_d524c60a.png"), technology: storageUrl("kazipoa-vacancy-technology_d7d4b5a8.png"), healthcare: storageUrl("kazipoa-vacancy-healthcare_068847f1.png"), hospitality: storageUrl("kazipoa-vacancy-hospitality_3eea05ab.png"), operations: storageUrl("kazipoa-vacancy-operations_ddd08ff5.png"), marketing: storageUrl("kazipoa-vacancy-marketing_945307df.jpg"), legal: storageUrl("kazipoa-vacancy-legal_20ae0b26.jpg"), education: storageUrl("kazipoa-vacancy-education_847476c9.jpg"), agriculture: storageUrl("kazipoa-vacancy-agriculture_1165458e.jpg"), engineering: storageUrl("kazipoa-vacancy-engineering_83529c87.jpg"), business: storageUrl("kazipoa-vacancy-business_6e2eaa5a.jpg"), internship: storageUrl("kazipoa-vacancy-internship_64f77554.jpg") } as const;
-const workplaceImages = { seeker: storageUrl("kazipoa-seeker-workplace-hero_bc5c1182.jpg"), employer: storageUrl("kazipoa-employer-workplace-hero_6341c303.jpg"), admin: storageUrl("kazipoa-admin-workplace-hero_b5170b35.jpg") } as const;
+const workplaceImages = { seeker: "/kazipoa-photo-seeker.jpg", employer: "/kazipoa-photo-employer.jpg", admin: "/kazipoa-photo-admin.jpg" } as const;
+const vacancyImages = { finance: "/categories/finance.svg", technology: "/categories/technology.svg", healthcare: "/categories/healthcare.svg", hospitality: "/categories/hospitality.svg", operations: "/categories/operations.svg", marketing: "/categories/marketing.svg", legal: "/categories/legal.svg", education: "/categories/education.svg", agriculture: "/categories/agriculture.svg", engineering: "/categories/engineering.svg", business: "/categories/business.svg", internship: "/categories/internship.svg" } as const;
+
 function getVacancyImage(job: Pick<Job, "category" | "title" | "description">) {
   return vacancyImages[resolveVacancyImageKey(job)];
 }

@@ -6,11 +6,11 @@ export default function AcceptedPaymentMethods() {
       <p>Employer payments use manual confirmation. Choose your available mobile-money or bank channel, then submit the transaction reference and receipt for Admin review.</p>
     </div>
     <div className="payment-method-badges" aria-label="Accepted payment channels">
-      <span className="payment-method-logo"><img src="/manus-storage/mpesa_3ec60d65.png" alt="M-Pesa / Lipa Namba" /></span>
-      <span className="payment-method-logo"><img src="/manus-storage/airtel-money_d5ad5319.png" alt="Airtel Money" /></span>
-      <span className="payment-method-logo"><img src="/manus-storage/tigo-pesa_68d7c7d1.jpg" alt="Tigo Pesa" /></span>
+      <span className="payment-method-logo"><b>M-Pesa</b><small>Lipa Namba</small></span>
+      <span className="payment-method-logo"><b>Airtel Money</b><small>Mobile money</small></span>
+      <span className="payment-method-logo"><b>Mixx by Yas</b><small>Tigo Pesa</small></span>
       <span className="payment-method-logo"><b>HaloPesa</b><small>Mobile money</small></span>
-      <span className="payment-method-logo"><img src="/manus-storage/crdb_5f9e10a4.png" alt="CRDB Bank" /></span>
+      <span className="payment-method-logo"><b>CRDB Bank</b><small>Lipa Namba</small></span>
     </div>
   </section>;
 }
