@@ -2,7 +2,6 @@ import { ArrowLeft, ArrowRight, BriefcaseBusiness, CalendarDays, CircleAlert, Ma
 import { useLocation, useRoute } from "wouter";
 import { toast } from "sonner";
 import { trpc } from "@/lib/trpc";
-import { storageUrl } from "@/lib/storageUrl";
 import DeadlineCountdown from "@/components/DeadlineCountdown";
 import { startLogin } from "@/const";
 import { useAuth } from "@/_core/hooks/useAuth";
@@ -26,13 +25,15 @@ export function vacancyTheme(vacancy: { category?: string | null; title?: string
 
 export function vacancyImage(theme: string) {
   const images: Record<string, string> = {
-    finance: storageUrl("kazipoa-vacancy-finance_d524c60a.png"),
-    technology: storageUrl("kazipoa-vacancy-technology_d7d4b5a8.png"),
-    healthcare: storageUrl("kazipoa-vacancy-healthcare_068847f1.png"),
-    hospitality: storageUrl("kazipoa-vacancy-hospitality_3eea05ab.png"),
-    operations: storageUrl("kazipoa-vacancy-operations_ddd08ff5.png"),
+    finance: "/categories/finance.svg",
+    technology: "/categories/technology.svg",
+    education: "/categories/education.svg",
+    healthcare: "/categories/healthcare.svg",
+    hospitality: "/categories/hospitality.svg",
+    operations: "/categories/operations.svg",
+    commercial: "/categories/marketing.svg",
   };
-  return images[theme] ?? storageUrl("kazipoa-employer-workplace_46d52586.png");
+  return images[theme] ?? "/categories/business.svg";
 }
 
 export default function PublicVacancy() {

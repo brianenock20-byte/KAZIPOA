@@ -1,6 +1,5 @@
 import { ArrowRight, Eye, LockKeyhole, ShieldCheck, X } from "lucide-react";
 import { startLogin } from "@/const";
-import { storageUrl } from "@/lib/storageUrl";
 import { useEffect } from "react";
 
 export const AUTH_HANDOFF_DELAY_MS = 350;
@@ -29,7 +28,7 @@ export default function AuthHandoff({ open, mode, onCancel }: AuthHandoffProps) 
           <X size={18} />
         </button>
         <div className="auth-handoff-visual">
-          <img src={storageUrl("kazipoa-hero_3140ef94.jpg")} alt="Professional at work in a Tanzanian workplace" />
+          <img src="/kazipoa-hero-login.jpg" alt="Professional at work in a Tanzanian workplace" />
           <div className="auth-handoff-visual-scrim" />
           <div className="auth-handoff-visual-copy">
             <span className="auth-handoff-kicker"><ShieldCheck size={14} /> Kazipoa secure access</span>
