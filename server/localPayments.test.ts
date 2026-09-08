@@ -12,7 +12,7 @@ describe("local payment publication gate", () => {
   it("prioritizes M-Pesa and includes card methods", () => {
     expect(publicPaymentMethods[0]).toMatchObject({ id: "mpesa", priority: 1 });
     expect(publicPaymentMethods.map(method => method.id)).toEqual(
-      expect.arrayContaining(["visa", "mastercard", "crdb_lipa_namba"]),
+      expect.arrayContaining(["visa", "mastercard", "halopesa"]),
     );
   });
 });

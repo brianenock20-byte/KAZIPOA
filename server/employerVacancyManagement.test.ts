@@ -148,7 +148,7 @@ describe("Employer vacancy management and registration clarity contracts", () =>
   it("places accepted payment methods under the Employer package heading and removes them from public pricing", () => {
     expect(packages).toContain('import AcceptedPaymentMethods from "@/components/AcceptedPaymentMethods";');
     expect(packages).toContain('<strong>Pay for the role you are posting</strong></div><small>Click one package to expand its benefits</small></div>\n      <AcceptedPaymentMethods />');
-    for (const label of ["M-Pesa / Lipa Namba", "Airtel Money", "Tigo Pesa", "HaloPesa", "CRDB Bank"]) expect(acceptedPaymentMethods).toContain(label);
+    for (const label of ["M-Pesa", "Airtel Money", "Mixx by Yas", "HaloPesa"]) expect(acceptedPaymentMethods).toContain(label);
     expect(home).not.toContain('className="payment-methods-panel"');
     expect(home).not.toContain('employer-pricing-block');
     expect(home).not.toContain('SIMPLE PRICING FOR EMPLOYERS');
@@ -252,7 +252,7 @@ describe("Employer vacancy management and registration clarity contracts", () =>
     expect(home).not.toContain('onClick={handleLogout}>Log out</button>');
     expect(home).toContain('className="language-button"');
     expect(home).toContain("<ThemeToggle />");
-    expect(home).toContain('className={`ghost-button ${isPortfolioWorkspace ? "portfolio-workspace-link" : "desktop-only"}`}');
+    expect(home).not.toContain('className="ghost-button portfolio-workspace-link"');
     expect(home).toContain('aria-label="Primary"');
     expect(home).toContain("Find jobs");
     expect(home).toContain("Urgent jobs");

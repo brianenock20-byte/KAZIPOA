@@ -4,8 +4,7 @@ export type LocalPaymentMethod =
   | "mastercard"
   | "airtel_money"
   | "mixx_by_yas"
-  | "halopesa"
-  | "crdb_lipa_namba";
+  | "halopesa";
 
 export type LocalPaymentState =
   | "initiated"
@@ -60,7 +59,6 @@ export const publicPaymentMethods: Array<{ id: LocalPaymentMethod; label: string
   { id: "airtel_money", label: "Airtel Money", priority: 4 },
   { id: "mixx_by_yas", label: "Mixx by Yas / Tigo Pesa", priority: 5 },
   { id: "halopesa", label: "HaloPesa", priority: 6 },
-  { id: "crdb_lipa_namba", label: "CRDB / Lipa Namba", priority: 7 },
 ];
 
 export function canPublishVacancy(paymentState: LocalPaymentState, adminApproved: boolean, employerVerified: boolean) {

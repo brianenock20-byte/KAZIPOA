@@ -10,7 +10,6 @@ export default function AcceptedPaymentMethods() {
       <span className="payment-method-logo"><b>Airtel Money</b><small>Mobile money</small></span>
       <span className="payment-method-logo"><b>Mixx by Yas</b><small>Tigo Pesa</small></span>
       <span className="payment-method-logo"><b>HaloPesa</b><small>Mobile money</small></span>
-      <span className="payment-method-logo"><b>CRDB Bank</b><small>Lipa Namba</small></span>
     </div>
   </section>;
 }

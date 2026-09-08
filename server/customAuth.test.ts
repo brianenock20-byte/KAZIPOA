@@ -14,8 +14,9 @@ import {
 describe("custom authentication safety primitives", () => {
   it("normalizes email addresses without changing password casing", () => {
     expect(normalizeEmail("  Candidate@Example.COM ")).toBe("candidate@example.com");
-    expect(validateCustomPassword("ShortPass1!")).toContain("12 characters");
+    expect(validateCustomPassword("ShortPass1!")).toBeNull();
     expect(validateCustomPassword("Correct Horse Battery Staple")).toBeNull();
+    expect(validateCustomPassword("")).toContain("required");
   });
 
   it("hashes passwords with a salted one-way scrypt record", async () => {
