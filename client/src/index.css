@@ -4396,16 +4396,27 @@ html.dark .company-avatar,html.dark .user-avatar{background:#173b2a;color:#72e0b
 }
 .role-brand-strip a img { width: 30px; height: 30px; flex: 0 0 30px; object-fit: contain; border-radius: 8px; }
 .role-brand-strip small { color: #8fd9b2; font-size: 10px; font-weight: 800; text-align: right; }
-.email-verify-banner { display:flex; align-items:center; gap:14px; margin:16px 0 0; padding:14px 18px; border-radius:12px; background:rgba(214,168,84,.12); border:1px solid rgba(214,168,84,.35); }
-.email-verify-banner-icon { flex:0 0 auto; display:grid; place-items:center; width:34px; height:34px; border-radius:10px; background:rgba(214,168,84,.18); color:#e7c078; }
+.workplace-seeker .role-brand-strip a, .workplace-employer .role-brand-strip a { color: #12241b; }
+.workplace-seeker .role-brand-strip small, .workplace-employer .role-brand-strip small { color: #1f7a53; }
+.workplace-seeker .role-brand-strip, .workplace-employer .role-brand-strip { border-bottom-color: rgba(24,183,122,.28); }
+.email-verify-banner { display:flex; align-items:center; gap:14px; margin:16px 0 0; padding:14px 18px; border-radius:12px; background:#fbead0; border:1px solid rgba(180,130,30,.35); }
+.email-verify-banner-icon { flex:0 0 auto; display:grid; place-items:center; width:34px; height:34px; border-radius:10px; background:rgba(180,130,30,.16); color:#8a5c14; }
 .email-verify-banner-copy { flex:1 1 auto; min-width:0; display:flex; flex-direction:column; gap:2px; }
-.email-verify-banner-copy strong { color:#fff; font-size:14px; }
-.email-verify-banner-copy span { color:rgba(255,255,255,.72); font-size:12.5px; }
-.email-verify-banner-action { flex:0 0 auto; display:inline-flex; align-items:center; gap:6px; padding:8px 14px; border-radius:999px; border:1px solid rgba(214,168,84,.5); background:rgba(214,168,84,.16); color:#f4dcae; font-size:12.5px; font-weight:700; cursor:pointer; white-space:nowrap; }
+.email-verify-banner-copy strong { color:#3d2a08; font-size:14px; }
+.email-verify-banner-copy span { color:rgba(61,42,8,.78); font-size:12.5px; }
+.email-verify-banner-action { flex:0 0 auto; display:inline-flex; align-items:center; gap:6px; padding:8px 14px; border-radius:999px; border:1px solid rgba(180,130,30,.45); background:rgba(180,130,30,.14); color:#5c3d0d; font-size:12.5px; font-weight:700; cursor:pointer; white-space:nowrap; }
 .email-verify-banner-action:disabled { opacity:.65; cursor:default; }
-.email-verify-banner-action:not(:disabled):hover { background:rgba(214,168,84,.26); }
-.email-verify-banner-dismiss { flex:0 0 auto; display:grid; place-items:center; width:26px; height:26px; border-radius:8px; border:0; background:transparent; color:rgba(255,255,255,.5); cursor:pointer; }
-.email-verify-banner-dismiss:hover { background:rgba(255,255,255,.08); color:#fff; }
+.email-verify-banner-action:not(:disabled):hover { background:rgba(180,130,30,.24); }
+.email-verify-banner-dismiss { flex:0 0 auto; display:grid; place-items:center; width:26px; height:26px; border-radius:8px; border:0; background:transparent; color:rgba(61,42,8,.55); cursor:pointer; }
+.email-verify-banner-dismiss:hover { background:rgba(61,42,8,.08); color:#3d2a08; }
+.workplace-admin .email-verify-banner { background:rgba(214,168,84,.14); border-color:rgba(214,168,84,.4); }
+.workplace-admin .email-verify-banner-icon { background:rgba(214,168,84,.2); color:#f4dcae; }
+.workplace-admin .email-verify-banner-copy strong { color:#fff; }
+.workplace-admin .email-verify-banner-copy span { color:rgba(255,255,255,.72); }
+.workplace-admin .email-verify-banner-action { border-color:rgba(214,168,84,.5); background:rgba(214,168,84,.18); color:#f4dcae; }
+.workplace-admin .email-verify-banner-action:not(:disabled):hover { background:rgba(214,168,84,.28); }
+.workplace-admin .email-verify-banner-dismiss { color:rgba(255,255,255,.5); }
+.workplace-admin .email-verify-banner-dismiss:hover { background:rgba(255,255,255,.08); color:#fff; }
 @media (max-width:640px) { .email-verify-banner { flex-wrap:wrap; } .email-verify-banner-copy { order:1; flex-basis:100%; } .email-verify-banner-action { order:2; } }
 
 /* Keep the three portfolio hero images as the visual start of the workspace. */
