@@ -1505,6 +1505,7 @@ html.dark .job-card .job-footer strong { color: #E0E0E0; }
 .whatsapp-instagram-button {
   border-color: rgba(245, 247, 244, 0.45);
   color: #F5F7F4;
+  background: rgba(245, 247, 244, 0.08);
 }
 .whatsapp-instagram-button:hover {
   border-color: #35D49A;
@@ -1904,7 +1905,7 @@ html.dark .filter-row select { background: #111516; color: #FFFFFF; border-color
 
 /* Social channel and interview status refinements */
 .whatsapp-promo-actions { flex-wrap: wrap; }
-.whatsapp-tiktok-button { border-color: rgba(245, 247, 244, 0.45); color: #F5F7F4; }
+.whatsapp-tiktok-button { border-color: rgba(245, 247, 244, 0.45); color: #F5F7F4; background: rgba(245, 247, 244, 0.08); }
 .whatsapp-tiktok-button:hover, .whatsapp-tiktok-button:focus-visible { border-color: #35D49A; color: #35D49A; background: rgba(53, 212, 154, 0.08); }
 .seeker-interview-list-heading { display:flex; align-items:center; justify-content:space-between; gap:12px; }
 .seeker-interview-list-heading label { display:inline-flex; align-items:center; gap:7px; color:#65766f; font-size:11px; font-weight:800; letter-spacing:.02em; }
