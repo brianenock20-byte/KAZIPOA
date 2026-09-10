@@ -4435,3 +4435,42 @@ html.dark .company-avatar,html.dark .user-avatar{background:#173b2a;color:#72e0b
   .workplace-hero-overlay strong { font-size: 28px; }
   .role-brand-strip { margin-top: 0; }
 }
+/* Tailwind CSS v4 theme color system - maps Kazipoa design colors */
+@layer theme {
+  :root {
+    color-scheme: light;
+    --color-foreground: var(--ink);
+    --color-background: var(--paper);
+    --color-muted-foreground: var(--muted);
+    --color-card: var(--cream);
+    --color-card-foreground: var(--ink);
+    --color-primary: var(--green);
+    --color-primary-foreground: #fff;
+    --color-secondary: var(--navy);
+    --color-secondary-foreground: #fff;
+    --color-destructive: var(--red);
+    --color-destructive-foreground: #fff;
+    --color-border: var(--line);
+    --color-input: var(--paper);
+    --color-input-foreground: var(--ink);
+  }
+
+  :root.dark {
+    color-scheme: dark;
+    --color-foreground: var(--ink);
+    --color-background: var(--paper);
+    --color-muted-foreground: var(--muted);
+    --color-card: var(--cream);
+    --color-card-foreground: var(--ink);
+    --color-primary: var(--green);
+    --color-primary-foreground: #fff;
+    --color-secondary: var(--navy);
+    --color-secondary-foreground: #fff;
+    --color-destructive: var(--red);
+    --color-destructive-foreground: #fff;
+    --color-border: var(--line);
+    --color-input: var(--navy-2);
+    --color-input-foreground: var(--ink);
+  }
+}
+
