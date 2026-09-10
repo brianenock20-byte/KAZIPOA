@@ -406,6 +406,20 @@ export const authEvents = mysqlTable("authEvents", {
   userEventIndex: index("auth_events_user_created_idx").on(table.userId, table.createdAt),
 }));
 
+export const waitlistSignups = mysqlTable("waitlistSignups", {
+  id: int("id").autoincrement().primaryKey(),
+  name: varchar("name", { length: 180 }).notNull(),
+  email: varchar("email", { length: 320 }).notNull(),
+  emailNormalized: varchar("emailNormalized", { length: 320 }).notNull(),
+  phone: varchar("phone", { length: 32 }),
+  intent: mysqlEnum("intent", ["seeker", "employer", "not_sure"]).notNull(),
+  source: varchar("source", { length: 64 }).default("early_access_page"),
+  notified: boolean("notified").default(false).notNull(),
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+}, table => ({
+  emailIndex: uniqueIndex("waitlist_email_idx").on(table.emailNormalized),
+}));
+
 export type User = typeof users.$inferSelect;
 export type InsertUser = typeof users.$inferInsert;
 export type Vacancy = typeof vacancies.$inferSelect;
@@ -427,3 +441,4 @@ export type SeekerEducation = typeof seekerEducation.$inferSelect;
 export type SeekerExperience = typeof seekerExperience.$inferSelect;
 export type SeekerSkill = typeof seekerSkills.$inferSelect;
 export type SeekerCertification = typeof seekerCertifications.$inferSelect;
+export type WaitlistSignup = typeof waitlistSignups.$inferSelect;

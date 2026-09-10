@@ -797,6 +797,35 @@ h1,h2,h3,strong,.brand-mark { font-family:Sora,Inter,sans-serif; }
 
 /* First-party custom authentication pilot */
 .custom-auth-page { min-height:100vh; display:grid; grid-template-columns:minmax(0,1.05fr) minmax(420px,.95fr); background:#F8F5EE; color:var(--navy); }
+
+.early-access-page { position:relative; min-height:100vh; overflow:hidden; background:#070b09; color:#f5f7f2; padding:24px 20px 60px; }
+.early-access-glow { position:absolute; inset:0; pointer-events:none; background-image:radial-gradient(circle at 82% 10%, rgba(32,179,118,.26), transparent 40%), radial-gradient(circle at 10% 90%, rgba(32,179,118,.14), transparent 46%), linear-gradient(160deg, #0d1d16 0%, #0a1310 45%, #070b09 100%); }
+.early-access-shell { position:relative; z-index:1; width:min(560px, 100%); margin-inline:auto; }
+.early-access-topbar { display:flex; align-items:center; justify-content:space-between; margin-bottom:28px; }
+.early-access-back { display:inline-flex; align-items:center; gap:8px; color:rgba(245,247,242,.75); text-decoration:none; font-weight:700; font-size:.85rem; }
+.early-access-back:hover { color:#fff; }
+.early-access-card { background:rgba(15,26,20,.72); border:1px solid rgba(32,179,118,.22); border-radius:20px; padding:clamp(24px,5vw,44px); backdrop-filter:none; }
+.early-access-badge { display:inline-flex; align-items:center; gap:7px; padding:6px 12px; border-radius:999px; background:rgba(32,179,118,.15); border:1px solid rgba(32,179,118,.35); color:#8fe0b8; font-size:.72rem; font-weight:800; letter-spacing:.08em; text-transform:uppercase; margin-bottom:18px; }
+.early-access-card h1 { font-size:clamp(1.6rem,4vw,2.1rem); line-height:1.15; margin:0 0 14px; letter-spacing:-.02em; }
+.early-access-intro { color:rgba(245,247,242,.72); line-height:1.55; margin:0 0 28px; font-size:.95rem; }
+.early-access-form { display:grid; gap:18px; }
+.early-access-field { display:grid; gap:7px; }
+.early-access-field label { color:rgba(245,247,242,.85); font-size:.85rem; font-weight:700; }
+.early-access-intent-row { display:grid; grid-template-columns:repeat(3,1fr); gap:8px; }
+.early-access-intent-option { padding:10px 8px; border-radius:10px; border:1px solid rgba(255,255,255,.16); background:rgba(255,255,255,.04); color:rgba(245,247,242,.8); font-size:.8rem; font-weight:700; cursor:pointer; text-align:center; }
+.early-access-intent-option.active { border-color:rgba(32,179,118,.6); background:rgba(32,179,118,.18); color:#fff; }
+.early-access-submit { width:100%; margin-top:6px; min-height:48px; border-radius:12px; font-weight:750; background:#20b376; color:#06120c; }
+.early-access-submit:hover { background:#28c584; }
+.early-access-spin { animation:spin 1s linear infinite; }
+@keyframes spin { to { transform:rotate(360deg); } }
+.early-access-error { color:#f3a4a4; font-size:.85rem; margin:0; }
+.early-access-fineprint { text-align:center; color:rgba(245,247,242,.6); font-size:.82rem; margin:4px 0 0; }
+.early-access-fineprint a { color:#8fe0b8; font-weight:700; text-decoration:none; }
+.early-access-success { text-align:center; display:grid; justify-items:center; gap:10px; padding:20px 0; color:#8fe0b8; }
+.early-access-success h2 { color:#fff; margin:6px 0 0; font-size:1.3rem; }
+.early-access-success p { color:rgba(245,247,242,.72); margin:0; line-height:1.5; }
+.early-access-home-link { margin-top:14px; color:#8fe0b8; font-weight:700; text-decoration:none; }
+@media (max-width:640px) { .early-access-intent-row { grid-template-columns:1fr; } }
 .custom-auth-visual { position:relative; min-height:100vh; overflow:hidden; background:var(--navy); }
 .custom-auth-visual>img { width:100%; height:100%; min-height:720px; object-fit:cover; display:block; filter:saturate(.92) contrast(.98); }
 .custom-auth-visual-art { position:absolute; inset:0; min-height:720px; background-image:radial-gradient(circle at 70% 24%, rgba(32,179,118,.48), transparent 44%), radial-gradient(circle at 18% 78%, rgba(32,179,118,.24), transparent 48%), url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='760' height='900' viewBox='0 0 760 900'%3E%3Cg fill='none' stroke='rgba(255,255,255,0.14)' stroke-width='3'%3E%3Crect x='300' y='440' width='220' height='170' rx='16'/%3E%3Cpath d='M338 440 V370 a72 72 0 0 1 144 0 v70'/%3E%3Ccircle cx='410' cy='515' r='16'/%3E%3Cpath d='M410 531 V560'/%3E%3C/g%3E%3C/svg%3E"), linear-gradient(155deg, #0e2f22 0%, #081d18 45%, #040f2b 100%); }

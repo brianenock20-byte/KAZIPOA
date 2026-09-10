@@ -12,6 +12,7 @@ const CustomAuth = lazy(() => import("./pages/CustomAuth"));
 const Profile = lazy(() => import("./pages/Profile"));
 const RoleManagement = lazy(() => import("./pages/RoleManagement"));
 const EmployerMarketplacePage = lazy(() => import("./pages/EmployerMarketplacePage"));
+const EarlyAccess = lazy(() => import("./pages/EarlyAccess"));
 
 export default function App() {
   return (
@@ -36,6 +37,7 @@ export default function App() {
           <Route path="/saved-jobs" component={Home} />
           <Route path="/login"><CustomAuth mode="login" /></Route>
           <Route path="/register"><CustomAuth mode="register" /></Route>
+          <Route path="/early-access" component={EarlyAccess} />
           <Route path="/forgot-password"><CustomAuth mode="forgot" /></Route>
           <Route path="/reset-password"><CustomAuth mode="reset" /></Route>
           <Route path="/verify-email"><CustomAuth mode="verify" /></Route>
