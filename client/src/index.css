@@ -8,6 +8,7 @@ html { scroll-behavior:smooth; }
 body { margin:0; background:var(--cream); color:var(--ink); font-family:Inter,system-ui,sans-serif; }
 button,input,select { font:inherit; }
 button { cursor:pointer; }
+a { color:inherit; text-decoration:none; }
 button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible { outline:3px solid #72E0B1; outline-offset:3px; }
 .skip-link { position:fixed; left:16px; top:10px; z-index:100; transform:translateY(-180%); background:#18B77A; color:#07150E; padding:10px 14px; border-radius:6px; font-weight:800; font-size:13px; text-decoration:none; box-shadow:0 8px 20px rgba(0,0,0,.24); transition:transform .18s var(--ease); }
 .skip-link:focus { transform:translateY(0); outline:3px solid #B5F0D2; outline-offset:3px; }
@@ -664,7 +665,6 @@ h1,h2,h3,strong,.brand-mark { font-family:Sora,Inter,sans-serif; }
 .public-verified-empty svg { color:var(--green); flex:none; }
 .public-verified-empty strong { display:block; color:var(--navy); font-family:Sora,Inter,sans-serif; font-size:14px; }
 .public-verified-empty p { margin-top:5px; font-size:12px; line-height:1.5; }
-.market-model-section { background:#fff; }
 .employer-conversion-section { background:var(--navy-2); color:#fff; }
 .employer-conversion-section .eyebrow,.employer-conversion-section h2 { color:#fff; }
 .employer-conversion-section p { color:#d8e4f4; }
